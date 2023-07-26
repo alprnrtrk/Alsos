@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -312,7 +312,6 @@ template {
 * {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   font-display: swap;
   outline: none;
   box-sizing: border-box;
@@ -333,7 +332,7 @@ body {
   min-height: 100vh;
   counter-reset: section;
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 18px;
 }
 @media only screen and (max-width: 1500px) {
   html,
@@ -386,17 +385,33 @@ a {
   justify-content: space-around;
   align-items: center;
   width: 50%;
+  height: 100%;
   padding-left: calc((100% - 1640px) / 2);
+  background-image: url("../img/navbar/mask.png");
+  background-size: 100% 100%;
+}
+.navbar__left .logo img {
+  max-width: 197px;
+  width: 100%;
+}
+.navbar__left .quote {
+  margin-top: auto;
+  margin-bottom: 35px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 .navbar__right {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 50%;
   height: 100%;
   padding-right: calc((100% - 1640px) / 2);
+  padding-left: calc(var(--navbar-navsGap) / 2);
   background-color: #cc681b;
 }
 .navbar__right .navs {
@@ -405,10 +420,154 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-bottom: 35px;
+  text-transform: capitalize;
   list-style: none;
 }
 .navbar__right .navs .each nav a {
-  padding: 0 calc(--navbar-navsGap / 2);
+  position: relative;
+  margin: 0 calc(var(--navbar-navsGap) / 2);
+  color: #f0eded;
+}
+.navbar__right .navs .each nav a:hover::before {
+  width: 20px;
+}
+.navbar__right .navs .each nav a.active::before {
+  width: 40px;
+}
+.navbar__right .navs .each nav a::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: #f0eded;
+  transition: 0.3s;
+}
+.navbar__right .lang .active-lang a :root {
+  --navbar-height: 115px;
+  --navbar-navsGap: 40px;
+}
+.navbar__right .lang .active-lang a .navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navbar-height);
+}
+.navbar__right .lang .active-lang a .navbar__left {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding-left: calc((100% - 1640px) / 2);
+  background-image: url("../img/navbar/mask.png");
+  background-size: 100% 100%;
+}
+.navbar__right .lang .active-lang a .navbar__left .logo img {
+  max-width: 197px;
+  width: 100%;
+}
+.navbar__right .lang .active-lang a .navbar__left .quote {
+  margin-top: auto;
+  margin-bottom: 35px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.navbar__right .lang .active-lang a .navbar__right {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+  padding-right: calc((100% - 1640px) / 2);
+  padding-left: calc(var(--navbar-navsGap) / 2);
+  background-color: #cc681b;
+}
+.navbar__right .lang .active-lang a .navbar__right .navs {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  text-transform: capitalize;
+  list-style: none;
+}
+.navbar__right .lang .active-lang a .navbar__right .navs .each nav a {
+  position: relative;
+  margin: 0 calc(var(--navbar-navsGap) / 2);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0eded;
+}
+.navbar__right .lang .active-lang a .navbar__right .navs .each nav a:hover::before {
+  width: 20px;
+}
+.navbar__right .lang .active-lang a .navbar__right .navs .each nav a.active::before {
+  width: 40px;
+}
+.navbar__right .lang .active-lang a .navbar__right .navs .each nav a::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: #f0eded;
+  transition: 0.3s;
+}
+.navbar__right .lang .active-lang a .navbar__right .lang .active-lang a {
+  color: #f0eded;
+  text-transform: uppercase;
+}
+.navbar__right .lang .active-lang a .navbar__right .lang-list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: wheat;
+  list-style: none;
+}
+.navbar__right .lang .active-lang a .navbar__right .lang-list li {
+  margin: 5px 0;
+}
+.navbar__right .lang .active-lang a .navbar__right .lang-list li a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar__right .lang .active-lang a .navbar__toggler {
+  display: none;
+}
+.navbar__right .lang-list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: wheat;
+  list-style: none;
+}
+.navbar__right .lang-list li {
+  margin: 5px 0;
+}
+.navbar__right .lang-list li a {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .navbar__toggler {
   display: none;

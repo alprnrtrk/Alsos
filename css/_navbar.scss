@@ -12,35 +12,257 @@
         @include flex(row, space-around, center);
 
         width: 50%;
+        height: 100%;
 
         padding-left: calc(calc(100% - $wrapper--size) / 2);
 
+        background-image: url("../img/navbar/mask.png");
+        background-size: 100% 100%;
+
         .logo {
-            img {}
+            img {
+                max-width: 197px;
+                width: 100%;
+            }
         }
 
-        .quoto {}
+        .quote {
+            margin-top: auto;
+            margin-bottom: 35px;
+
+            font-size: 1rem;
+            font-weight: $fontWeight--medium;
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+        }
     }
 
     &__right {
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, flex-end);
 
         width: 50%;
         height: 100%;
 
         padding-right: calc(calc(100% - $wrapper--size) / 2);
+        padding-left: calc(var(--navbar-navsGap) / 2);
 
         background-color: $color--primary;
 
         .navs {
             @include flex();
 
+            margin-bottom: 35px;
+
+            text-transform: capitalize;
+
             list-style: none;
 
             .each{
                 nav{
                     a{
-                        padding: 0 calc(--navbar-navsGap/2);
+                        position: relative;
+
+                        margin: 0 calc(var(--navbar-navsGap) / 2);
+
+                        color: $color--body-background;
+
+                        &:hover{
+                            &::before{
+                                width: 20px;
+                            }
+                        }
+
+                        &.active{
+                            &::before{
+                                width: 40px;
+                            }
+                        }
+
+                        &::before{
+                            content: "";
+
+                            position: absolute;
+
+                            top: -15px;
+                            left: 0;
+
+                            display: block;
+
+                            width: 0px;
+                            height: 2px;
+
+                            background-color: $color--body-background;
+
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lang{
+            .active-lang{
+                a{
+                    :root {
+    --navbar-height: 115px;
+    --navbar-navsGap: 40px;
+}
+
+.navbar {
+    @include flex(row, space-between, center);
+
+    height: var(--navbar-height);
+
+    &__left {
+        @include flex(row, space-around, center);
+
+        width: 50%;
+        height: 100%;
+
+        padding-left: calc(calc(100% - $wrapper--size) / 2);
+
+        background-image: url("../img/navbar/mask.png");
+        background-size: 100% 100%;
+
+        .logo {
+            img {
+                max-width: 197px;
+                width: 100%;
+            }
+        }
+
+        .quote {
+            margin-top: auto;
+            margin-bottom: 35px;
+
+            font-size: 1rem;
+            font-weight: $fontWeight--medium;
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+        }
+    }
+
+    &__right {
+        @include flex(row, space-between, flex-end);
+
+        width: 50%;
+        height: 100%;
+
+        padding-right: calc(calc(100% - $wrapper--size) / 2);
+        padding-left: calc(var(--navbar-navsGap) / 2);
+
+        background-color: $color--primary;
+
+        .navs {
+            @include flex();
+
+            margin-bottom: 35px;
+
+            text-transform: capitalize;
+
+            list-style: none;
+
+            .each{
+                nav{
+                    a{
+                        position: relative;
+
+                        margin: 0 calc(var(--navbar-navsGap) / 2);
+
+                        font-size: 1rem;
+                        font-weight: $fontWeight--semi-bold;
+
+                        color: $color--body-background;
+
+                        &:hover{
+                            &::before{
+                                width: 20px;
+                            }
+                        }
+
+                        &.active{
+                            &::before{
+                                width: 40px;
+                            }
+                        }
+
+                        &::before{
+                            content: "";
+
+                            position: absolute;
+
+                            top: -15px;
+                            left: 0;
+
+                            display: block;
+
+                            width: 0px;
+                            height: 2px;
+
+                            background-color: $color--body-background;
+
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lang{
+            .active-lang{
+                a{
+                    color: $color--body-background;
+                    text-transform: uppercase;
+                }
+            }
+
+            &-list{
+                @include flex(column, center, center);
+
+                padding: 10px;
+
+                background-color: wheat;
+
+                list-style: none;
+
+                li{
+                    margin: 5px 0;
+
+                    a{
+                        text-transform: uppercase;
+
+                        font-weight: $fontWeight--bold;
+                    }
+                }
+            }
+        }
+    }
+
+    &__toggler {
+        display: none;
+    }
+}
+                }
+            }
+
+            &-list{
+                @include flex(column, center, center);
+
+                padding: 10px;
+
+                background-color: wheat;
+
+                list-style: none;
+
+                li{
+                    margin: 5px 0;
+
+                    a{
+                        text-transform: uppercase;
+
+                        font-weight: $fontWeight--bold;
                     }
                 }
             }

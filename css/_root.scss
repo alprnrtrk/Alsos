@@ -9,7 +9,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
     font-display: swap;
     outline: none;
     box-sizing: border-box;
@@ -31,7 +30,7 @@ body {
     counter-reset: section;
     overflow-x: hidden;
 
-    font-size: 16px;
+    font-size: 18px;
 
     @include devices(xxl){
         font-size: 13px;
