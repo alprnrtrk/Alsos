@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alsos/Anasayfa</title>
 
+    <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <header class="navbar">
         <div class="navbar__left">
             <a class="logo" href="#">
@@ -76,9 +76,62 @@
         </div>
     </header>
 
+    <section class="intro page-start">
+        <div class="swiper intro__slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <video id="video-1" autoplay loop muted>
+                        <source src="video/intro/test.mp4" type="video/mp4">
+                    </video>
+
+                    <h3>Ahşabın Kalbine Ulaşmak İçin</h3>
+                    <h2>15 YILDIR BU YOLDAYIZ!</h2>
+
+                    <a class="btn btn--primary btn--iconed" href="#">
+                        ürünleri gör
+                    </a>
+
+                    <button data-role="playPause" data-target="#video-1" class="play-pause">
+                        <img src="img/icons/pause.svg" alt="">
+                    </button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/intro/intro-1.jpg" alt="">
+
+                    <h3>Ahşabın Kalbine Ulaşmak İçin</h3>
+                    <h2>15 YILDIR BU YOLDAYIZ!</h2>
+
+                    <a class="btn btn--primary btn--iconed" href="#">
+                        ürünleri gör
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/intro/intro-1.jpg" alt="">
+
+                    <h3>Ahşabın Kalbine Ulaşmak İçin</h3>
+                    <h2>15 YILDIR BU YOLDAYIZ!</h2>
+
+                    <a class="btn btn--primary btn--iconed" href="#">
+                        ürünleri gör
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
     <script src="js/query.js"></script>
     <script src="js/swipper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        const swiper = new Swiper('.intro__slider', {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+        });
+    </script>
 </body>
 
 </html>

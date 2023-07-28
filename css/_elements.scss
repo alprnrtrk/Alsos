@@ -1,0 +1,51 @@
+.page-start {
+    padding-top: var(--navbar-height);
+}
+
+.btn {
+    @include center;
+
+    padding: 25px 40px;
+
+    font-size: 1.2rem;
+    font-weight: $fontWeight--medium;
+
+    border-radius: 100px;
+
+    transition: .3s;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    &--primary {
+        background-color: $color--primary;
+        color: $color--body-background;
+    }
+
+    &--iconed {
+        &:hover{
+            &::after{
+                margin-left: 30px;
+            }
+        }
+
+        &::after {
+            content: "";
+
+            display: block;
+
+            width: 40px;
+            height: 7px;
+
+            margin-left: 20px;
+
+            background-image: url(../img/icons/arrow-btn.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            transition: .3s;
+        }
+    }
+}
