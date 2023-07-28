@@ -1,3 +1,7 @@
+:root{
+    --intro-offset: 60px;
+}
+
 $color-intro-text: #fff;
 
 .intro {
@@ -72,7 +76,7 @@ $color-intro-text: #fff;
                 .btn {
                     position: relative;
 
-                    margin: 90px 0 60px;
+                    margin: var(--intro-offset) 0;
                 }
 
                 .play-pause {
@@ -80,8 +84,8 @@ $color-intro-text: #fff;
 
                     z-index: 1;
 
-                    bottom: 70px;
-                    left: 70px;
+                    bottom: calc(var(--intro-offset) - 50px / 2);
+                    left: calc(var(--intro-offset) + 25px);
 
                     display: block;
 
@@ -128,8 +132,8 @@ $color-intro-text: #fff;
 
                 inset: inherit;
 
-                bottom: 90px;
-                right: 90px;
+                bottom: var(--intro-offset);
+                right: var(--intro-offset);
 
                 width: max-content;
 
@@ -170,8 +174,8 @@ $color-intro-text: #fff;
 
                     &-active {
                         &::before {
-                            width: 60px;
-                            height: 60px;
+                            width: 70px;
+                            height: 70px;
 
                             @include devices(xl) {
                                 width: 30px;

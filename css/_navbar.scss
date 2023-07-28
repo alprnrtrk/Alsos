@@ -211,6 +211,7 @@
 
                     color: $color--body-background;
 
+                    font-weight: $fontWeight--medium;
                     text-transform: uppercase;
 
                     @include devices(xl) {
@@ -287,13 +288,38 @@
                     margin: 5px 0;
 
                     a {
+                        position: relative;
 
                         text-transform: uppercase;
 
                         font-size: 1rem;
-                        font-weight: $fontWeight--bold;
+                        font-weight: $fontWeight--medium;
 
                         color: $color--body-background;
+
+                        &:hover{
+                            &::before{
+                                width: 40%;
+                            }
+                        }
+
+                        &::before{
+                            content: "";
+
+                            position: absolute;
+
+                            bottom: 0;
+                            left: 0;
+
+                            display: block;
+
+                            width: 0;
+                            height: 2px;
+
+                            background-color: $color--body-background;
+
+                            transition: .2s;
+                        }
 
                         @include devices(xl) {
                             font-size: 2rem;
