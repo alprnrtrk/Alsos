@@ -401,6 +401,17 @@ a {
   background-position: center center;
   transition: 0.3s;
 }
+@media only screen and (max-width: 1200px) {
+  .btn--iconed::after {
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 2.5rem;
+  }
+}
 
 :root {
   --navbar-height: 115px;
@@ -706,12 +717,14 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.intro__slider .swiper-slide h2, .intro__slider .swiper-slide h3 {
+.intro__slider .swiper-slide h2,
+.intro__slider .swiper-slide h3 {
   position: relative;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 3px;
   color: #fff;
+  text-align: center;
 }
 .intro__slider .swiper-slide h2 {
   margin-top: 10px;
@@ -725,11 +738,11 @@ a {
 .intro__slider .swiper-slide .play-pause {
   position: absolute;
   z-index: 1;
-  bottom: 90px;
-  left: 90px;
+  bottom: 70px;
+  left: 70px;
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: transparent;
   border: 2px solid #f0eded;
   border-radius: 100%;
@@ -746,6 +759,16 @@ a {
   transform: translate(-50%, -50%);
   width: 16px;
   height: 23px;
+}
+@media only screen and (max-width: 1200px) {
+  .intro__slider .swiper-slide .play-pause {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .intro__slider .swiper-slide {
+    padding: 0 20px;
+  }
 }
 .intro__slider .swiper-pagination {
   position: absolute;
@@ -780,6 +803,30 @@ a {
 .intro__slider .swiper-pagination-bullet-active::before {
   width: 60px;
   height: 60px;
+}
+@media only screen and (max-width: 1200px) {
+  .intro__slider .swiper-pagination-bullet-active::before {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .intro__slider .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .intro__slider .swiper-pagination {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .intro__slider {
+    height: calc(50vh - var(--navbar-height));
+  }
 }
 
 body {
