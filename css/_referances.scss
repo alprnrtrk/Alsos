@@ -1,0 +1,81 @@
+.referances{
+    @include wrap;
+
+    padding-bottom: 50px;
+
+    .swiper{
+        padding-top: 50px;
+        padding-bottom: 50px;    
+
+        &-wrapper{
+            position: relative;
+        }
+
+        &-slide{
+            @include aspect(1,1);
+            @include center;
+
+            img{
+                width: 100%;
+                height: 100%;
+
+                object-fit: contain;
+
+                @include devices(xl){
+                    width: 50%;
+                }
+            }
+        }
+
+        .buttons{
+            @include flex(row);
+        
+            position: absolute;
+
+            z-index: 1;
+
+            bottom: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            .button{
+                &-next, &-prev{
+                    width: 80px;
+                    height: 10px;
+
+                    background-color: transparent;
+                    border: 0;
+
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+
+                    cursor: pointer;
+
+                    transition: .3s;
+                }
+
+                &-next{
+                    background-image: url("../img/icons/dar-r.svg");
+
+                    &:hover{
+                        transform: translateX(10px);
+                    }
+                }
+                
+                &-prev{
+                    background-image: url("../img/icons/dark-l.svg");
+
+                    &:hover{
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+        }
+
+        @include devices(xl){
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.discover {
+    @include wrap;
+
+    padding-bottom: 10vw;
+
+    &__boxes {
+        @include flex(row);
+
+        .box {
+            @include flex(column, center, center);
+            @include aspect(82, 45);
+
+            width: 50%;
+
+            background-color: $color--primary;
+
+            a{
+                @include flex(column, center, center);
+
+                h3 {
+                    font-size: 1rem;
+    
+                    color: $color--body-background;
+    
+                    text-align: center;
+    
+                    @include devices(xl){
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                img {
+                    width: 6rem;
+                    height: 6rem;
+    
+                    margin: 3rem 0;
+                }
+    
+                h2 {
+                    font-size: 1.5rem;
+                    letter-spacing: 6px;
+                    text-transform: uppercase;
+                    font-weight: $fontWeight--ultra-bold;
+    
+                    color: $color--body-background;
+    
+                    
+                    @include devices(xl){
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            &.bg-img {
+                * {
+                    position: relative;
+                }
+
+                position: relative;
+
+                background-image: url("../img/discover/p-1.png");
+                background-size: cover;
+                background-position: center center;
+
+                &::before {
+                    content: "";
+
+                    position: absolute;
+
+                    top: 0;
+                    left: 0;
+
+                    display: block;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background-color: transparentize($color--body-foreground, .5);
+                }
+            }
+
+            @include devices(xl) {
+                @include aspect(1,1); 
+                
+                width: 100%;
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column);
+        }
+    }
+}
