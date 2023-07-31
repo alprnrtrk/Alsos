@@ -24,7 +24,8 @@
     }
 
     &--secondary {
-        background-color: $color--other
+        background-color: $color--other;
+        color: $color--primary;
     }
 
     &--iconed,
