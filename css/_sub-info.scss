@@ -29,4 +29,8 @@
             line-height: normal;
         }
     }
+
+    @include devices(xl){
+        padding-top: 0;
+    }
 }

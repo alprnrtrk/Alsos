@@ -376,6 +376,21 @@
             &:nth-child(2){
                 margin-top: 0px;
             }
+
+            @include devices(xl){
+                margin: 0 10px;
+
+                writing-mode: inherit;
+                transform: rotate(0);
+            }
         }
+
+        @include devices(xl){
+            @include flex(column, center, center);
+        }
+    }
+
+    @include devices(xl){
+        padding-bottom: 0px;
     }
 }
