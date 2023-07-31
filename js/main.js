@@ -17,6 +17,9 @@ $(document).ready(function () {
             case "playPause":
                 playPause(this);
                 break;
+            case "filter":
+                filter(this);
+                break;
 
         }
     })
@@ -45,4 +48,15 @@ function playPause(object) {
 
         $(target).trigger('pause');
     }
+} 
+
+function filter(object){
+    let target = $(object).attr("data-target");
+    let group = $(object).attr("data-value");
+
+    $(group).removeClass("active");
+    $(target).addClass("active");
+
+    $('[data-role = "filter"]').removeClass("active");
+    $(object).addClass("active");
 }

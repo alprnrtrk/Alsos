@@ -2,351 +2,380 @@
     --info-height: 500px;
 }
 
-.test {
-    position: relative;
+.info{
+    @include wrap-fluid;
 
-    @include wrap;
-    @include flex(row);
+    padding-top: 100px;
+    padding-bottom: 100px;
 
-    width: 100%;
-    height: var(--info-height);
+    background-image: url("../img/info/mask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
-    margin-top: 100px;
-    min-height: 100px;
-
-    .center {
-        position: absolute;
-
-        z-index: 1;
-
-        width: var(--info-height);
+    &__wood {
+        @include flex(row);
+        
+        position: relative;
+    
+        width: 100%;
         height: var(--info-height);
-
-        top: 50%;
-        left: 50%;
-
-        transform: translate(-50%, -50%);
-
-        img {
-            width: 100%;
-            height: 100%;
-
-            transform: scale(1.5);
-
-            @include devices(xl){
-                transform: scale(.75);
-            }
-        }
-    }
-
-    .left,
-    .right {
-        width: 50%;
-        height: var(--info-height);
-
-        .up,
-        .down {
-            @include center;
-
-            position: relative;
-            z-index: 2;
-
-            height: 50%;
-
-            &::before,
-            &::after {
-                content: "";
-
-                position: absolute;
-
-                display: block;
-
-                width: 50%;
-                height: 3px;
-
-                background-image: linear-gradient(90deg, #000, #000 75%, transparent 75%, transparent 100%);
-                background-size: 20px 1px;
-
-                opacity: .5;
-
-                @include devices(xl){
-                    inset: inherit!important;
-
-                    width: 3px;
-                    height: 60%;
-
-                    background-image: linear-gradient(0deg, #000, #000 75%, transparent 75%, transparent 100%);
-                    background-size: 1px 20px;
-                }
-            }
-
-            &::after {
-                width: 10%;
-                right: 50%;
-
-                background-image: linear-gradient(90deg, #000, #000 75%, transparent 75%, transparent 100%);
-                background-size: 20px 1px;
-
-                @include devices(xl){
-                    display: none;
-                }
-            }
-
-            .dot {
-                position: absolute;
-
-                transform: translateY(-50%);
-
-                display: block;
-
-                width: 20px;
-                height: 20px;
-
-                border-radius: 100%;
-
-                background-color: black;
-
-                opacity: .5;
-
-                @include devices(xl){
-                    display: none;
-                }
-            }
-
-            h2{
-                @include devices(xl){
-                    font-size: 2rem;
-                }
-            }
-
-            @include devices(xl){
+    
+        .center {
+            position: absolute;
+    
+            z-index: 1;
+    
+            width: var(--info-height);
+            height: var(--info-height);
+    
+            top: 50%;
+            left: 50%;
+    
+            transform: translate(-50%, -50%);
+    
+            img {
                 width: 100%;
                 height: 100%;
+    
+                transform: scale(1.5);
+    
+                @include devices(xl){
+                    transform: scale(1);
+                }
             }
         }
-
-        .up{
+    
+        .left,
+        .right {
+            width: 50%;
+            height: var(--info-height);
+    
+            .up,
+            .down {
+                @include center;
+    
+                position: relative;
+                z-index: 2;
+    
+                height: 50%;
+    
+                &::before,
+                &::after {
+                    content: "";
+    
+                    position: absolute;
+    
+                    display: block;
+    
+                    width: 50%;
+                    height: 3px;
+    
+                    background-image: linear-gradient(90deg, #000, #000 75%, transparent 75%, transparent 100%);
+                    background-size: 20px 1px;
+    
+                    opacity: .5;
+    
+                    @include devices(xl){
+                        inset: inherit!important;
+    
+                        width: 3px;
+                        height: 60%;
+    
+                        background-image: linear-gradient(0deg, #000, #000 75%, transparent 75%, transparent 100%);
+                        background-size: 1px 20px;
+                    }
+                }
+    
+                &::after {
+                    width: 10%;
+                    right: 50%;
+    
+                    background-image: linear-gradient(90deg, #000, #000 75%, transparent 75%, transparent 100%);
+                    background-size: 20px 1px;
+    
+                    @include devices(xl){
+                        display: none;
+                    }
+                }
+    
+                .dot {
+                    position: absolute;
+    
+                    transform: translateY(-50%);
+    
+                    display: block;
+    
+                    width: 20px;
+                    height: 20px;
+    
+                    border-radius: 100%;
+    
+                    background-color: black;
+    
+                    opacity: .5;
+    
+                    @include devices(xl){
+                        display: none;
+                    }
+                }
+    
+                h2{
+                    @include devices(xl){
+                        font-size: 2rem;
+                    }
+                }
+    
+                @include devices(xl){
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+    
+            .up{
+                h2{
+                    margin-top: 50px;
+                    
+                    @include devices(xl){
+                        margin: 0!important;
+                    }
+                }
+            }
+    
+            .down{
+                h2{
+                    margin-bottom: 50px;
+    
+                    @include devices(xl){
+                        margin: 0!important;
+                    }
+                }
+            }
+    
+            @include devices(xl){
+                @include flex(row);
+    
+                width: 100%;
+    
+                margin: 0!important;
+            }
+        }
+    
+        .left{
             h2{
-                margin-top: 50px;
+                text-align: right;
+    
+                margin-right: 20%;
+    
+                @include devices(xl){
+                    text-align: center;
+    
+                    margin-right: 0;
+                }
+            }
+        }
+    
+        .right{
+            h2{
+                text-align: left;
+    
+                margin-left: 20%;
+    
                 
                 @include devices(xl){
-                    margin: 0!important;
+                    text-align: center;
+    
+                    margin-left: 0;
                 }
             }
         }
-
-        .down{
-            h2{
-                margin-bottom: 50px;
-
-                @include devices(xl){
-                    margin: 0!important;
+    
+        .left {
+            margin-right: 100px;
+    
+            .up {
+                &::before,
+                &::after {
+                    top: calc(50% - 50px);
+                    right: 0;
+                    transform: translateY(-50%);
+    
+                    @include devices(xl){
+                        top: 50%!important;
+                        right: 25%!important;
+                    }
+                }
+    
+                &::after {
+                    right: 50%;
+                    transform-origin: 100% center;
+                    transform: rotate(-30deg);
+    
+                    @include devices(xl){
+                        display: none;
+                    }
+                }
+    
+                .dot {
+                    top: calc(50% - 50px);
+                    right: 0;
+                }
+    
+                h2{
+                    @include devices(xl){
+                        margin-bottom: auto!important;
+                        margin-left: auto!important;
+                        margin-right: 25%!important;
+    
+                        text-align: right;
+                    }
+                }
+            }
+    
+            .down {
+    
+                &::before,
+                &::after {
+                    top: calc(50% + 50px);
+                    right: 0;
+                    transform: translateY(-50%);
+    
+                    @include devices(xl){
+                        top: 50%!important;
+                        left: 25%!important;
+                    }
+                }
+    
+                &::after {
+                    right: 50%;
+    
+                    transform-origin: 100% center;
+                    transform: rotate(30deg);
+                }
+    
+                .dot {
+                    top: calc(50% + 50px);
+                    right: 0;
+                }
+                
+                h2{
+                    @include devices(xl){
+                        margin-bottom: auto!important;
+                        margin-right: auto!important;
+    
+                        margin-left: 25%!important;
+    
+                        text-align: left;
+                    }
                 }
             }
         }
-
+    
+        .right {
+            margin-left: 100px;
+    
+            .up {
+    
+                &::before,
+                &::after {
+                    top: calc(50% - 50px);
+                    left: 0;
+                    transform: translateY(-50%);
+    
+                    @include devices(xl){
+                        top: 50%!important;
+                        right: 25%!important;
+                    }
+                }
+    
+                &::after {
+                    left: 50%;
+    
+                    transform-origin: 0 center;
+                    transform: rotate(30deg);
+                }
+    
+                .dot {
+                    top: calc(50% - 50px);
+                    left: 0;
+                }
+    
+                
+                h2{
+                    @include devices(xl){
+                        margin-top: auto!important;
+                        margin-left: auto!important;
+    
+                        margin-right: 25%!important;
+    
+                        text-align: right;
+                    }
+                }
+            }
+    
+            .down {
+    
+                &::before,
+                &::after {
+                    top: calc(50% + 50px);
+                    left: 0;
+                    transform: translateY(-50%);
+    
+                    @include devices(xl){
+                        top: 50%!important;
+                        left: 25%!important;
+                    }
+                }
+    
+                &::after {
+                    left: 50%;
+    
+                    transform-origin: 0 center;
+                    transform: rotate(-30deg);
+                }
+    
+                .dot {
+                    top: calc(50% + 50px);
+                    left: 0;
+                }
+    
+                
+                h2{
+                    @include devices(xl){
+                        margin-top: auto!important;
+                        margin-right: auto!important;
+    
+                        margin-left: 25%!important;
+    
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    
         @include devices(xl){
-            @include flex(row);
-
-            width: 100%;
-
-            margin: 0!important;
+            @include flex(column);
         }
     }
 
-    .left{
+    &__slogan{
+        @include flex(row, center, center);
+
+        margin-top: 50px;
+
         h2{
-            text-align: right;
+            margin-top: 60px;
 
-            margin-right: 20%;
+            font-size: 4rem;
 
-            @include devices(xl){
-                text-align: center;
+            font-weight: $fontWeight--ultra-bold;
 
-                margin-right: 0;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+
+            &:nth-child(2){
+                margin-top: 0px;
             }
         }
-    }
-
-    .right{
-        h2{
-            text-align: left;
-
-            margin-left: 20%;
-
-            
-            @include devices(xl){
-                text-align: center;
-
-                margin-left: 0;
-            }
-        }
-    }
-
-    .left {
-        margin-right: 100px;
-
-        .up {
-            &::before,
-            &::after {
-                top: calc(50% - 50px);
-                right: 0;
-                transform: translateY(-50%);
-
-                @include devices(xl){
-                    top: 50%!important;
-                    right: 25%!important;
-                }
-            }
-
-            &::after {
-                right: 50%;
-                transform-origin: 100% center;
-                transform: rotate(-30deg);
-
-                @include devices(xl){
-                    display: none;
-                }
-            }
-
-            .dot {
-                top: calc(50% - 50px);
-                right: 0;
-            }
-
-            h2{
-                @include devices(xl){
-                    margin-bottom: auto!important;
-                    margin-left: auto!important;
-                    margin-right: 25%!important;
-
-                    text-align: right;
-                }
-            }
-        }
-
-        .down {
-
-            &::before,
-            &::after {
-                top: calc(50% + 50px);
-                right: 0;
-                transform: translateY(-50%);
-
-                @include devices(xl){
-                    top: 50%!important;
-                    left: 25%!important;
-                }
-            }
-
-            &::after {
-                right: 50%;
-
-                transform-origin: 100% center;
-                transform: rotate(30deg);
-            }
-
-            .dot {
-                top: calc(50% + 50px);
-                right: 0;
-            }
-            
-            h2{
-                @include devices(xl){
-                    margin-bottom: auto!important;
-                    margin-right: auto!important;
-
-                    margin-left: 25%!important;
-
-                    text-align: left;
-                }
-            }
-        }
-    }
-
-    .right {
-        margin-left: 100px;
-
-        .up {
-
-            &::before,
-            &::after {
-                top: calc(50% - 50px);
-                left: 0;
-                transform: translateY(-50%);
-
-                @include devices(xl){
-                    top: 50%!important;
-                    right: 25%!important;
-                }
-            }
-
-            &::after {
-                left: 50%;
-
-                transform-origin: 0 center;
-                transform: rotate(30deg);
-            }
-
-            .dot {
-                top: calc(50% - 50px);
-                left: 0;
-            }
-
-            
-            h2{
-                @include devices(xl){
-                    margin-top: auto!important;
-                    margin-left: auto!important;
-
-                    margin-right: 25%!important;
-
-                    text-align: right;
-                }
-            }
-        }
-
-        .down {
-
-            &::before,
-            &::after {
-                top: calc(50% + 50px);
-                left: 0;
-                transform: translateY(-50%);
-
-                @include devices(xl){
-                    top: 50%!important;
-                    left: 25%!important;
-                }
-            }
-
-            &::after {
-                left: 50%;
-
-                transform-origin: 0 center;
-                transform: rotate(-30deg);
-            }
-
-            .dot {
-                top: calc(50% + 50px);
-                left: 0;
-            }
-
-            
-            h2{
-                @include devices(xl){
-                    margin-top: auto!important;
-                    margin-right: auto!important;
-
-                    margin-left: 25%!important;
-
-                    text-align: left;
-                }
-            }
-        }
-    }
-
-    @include devices(xl){
-        @include flex(column);
     }
 }

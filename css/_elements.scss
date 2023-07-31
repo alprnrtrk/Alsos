@@ -23,7 +23,12 @@
         color: $color--body-background;
     }
 
-    &--iconed {
+    &--secondary {
+        background-color: $color--other
+    }
+
+    &--iconed,
+    &--iconed-colored {
         &:hover {
             &::after {
                 margin-left: 30px;
@@ -53,9 +58,65 @@
         }
     }
 
+    &--iconed-colored {
+        &::after {
+            background-image: url("../img/icons/arrow-btn-colored.svg");
+        }
+    }
+
     @include devices(xl) {
         padding: 10px 20px;
 
         font-size: 2.5rem;
+    }
+}
+
+.lined-title {
+    position: relative;
+
+    isolation: isolate;
+
+    width: 100%;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        z-index: -1;
+
+        top: 50%;
+        left: calc(calc(100vw - $wrapper--size) / -2);
+        transform: translateY(-50%);
+
+        display: block;
+
+        width: 100vw;
+        height: 1px;
+
+        background-color: transparentize($color--body-foreground, .5);
+
+        @include devices(xxl) {
+            left: calc($wrapper--mobilePadding * -1);
+        }
+    }
+
+    h2 {
+        width: max-content;
+
+        padding: 0 60px;
+        margin: auto;
+
+        font-size: 2rem;
+        font-weight: $fontWeight--ultra-bold;
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+
+        background-color: $color--body-background;
+
+        @include devices(xl) {
+            padding: 0 30px;
+        }
     }
 }
