@@ -2,6 +2,25 @@
     &__upper {
         @include flex(row);
 
+        >.left,
+        >.right {
+            @include devices(xl) {
+                @include flex(column!important, center!important, center!important);
+
+                @include aspect(1, 1, true);
+
+                aspect-ratio: inherit;
+
+                width: 100% !important;
+                height: auto;
+                
+                padding-top: 20px!important;
+                padding-bottom: 20px!important;
+                padding-left: 0!important;
+                padding-right: 0!important;
+            }
+        }
+
         >.left {
             @include flex(column, space-around, flex-start);
             @include aspect(96, 39);
@@ -12,7 +31,7 @@
 
             width: 50%;
 
-            padding-left: calc(calc(100% - $wrapper--size) / 2);
+            padding: 0 100px;
 
             background-image: url("../img/footer/1.png");
             background-size: cover;
@@ -71,13 +90,12 @@
 
             width: 50%;
 
-            padding-left: calc(calc(100% - $wrapper--size) / 2);
-            padding-right: calc(calc(100% - $wrapper--size) / 2);
+            padding: 0 100px;
 
             background-color: $color--secondary;
 
             .navs {
-                @include flex(row, space-around, center);
+                @include flex(row, space-between, center);
 
                 width: 100%;
 
@@ -175,20 +193,6 @@
             @include devices(xl){
                 padding-top: 20px;
                 padding-bottom: 20px;
-            }
-        }
-
-        >.left,
-        >.right {
-            @include devices(xl) {
-                @include flex(column, center, center);
-
-                @include aspect(1, 1, true);
-
-                aspect-ratio: inherit;
-
-                width: 100% !important;
-                height: auto;
             }
         }
 
