@@ -1,7 +1,7 @@
 // when the document ready start this function
 
 $(document).ready(function () {
-    // event listener for "data-role" elements
+    // event listener for "data-role" elementss
 
     $("[data-role]").on("click", function () {
         // get the role attribute of a clicked element

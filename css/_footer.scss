@@ -103,6 +103,10 @@
 
                 li {
                     a {
+                        position: relative;
+
+                        padding-bottom: 10px;
+
                         font-size: 1rem;
                         font-weight: $fontWeight--semi-bold;
 
@@ -110,10 +114,37 @@
 
                         color: $color--body-background;
 
+                        transition: .3s;
+
                         @include devices(xl) {
                             margin: 5px 0;
 
                             font-size: 2.5rem;
+                        }
+
+                        &:hover{
+                            padding-bottom: 5px;
+                            &::before{
+                                width: 100%;
+                            }
+                        }
+
+                        &::before{
+                            content: "";
+
+                            position: absolute;
+
+                            left: 0;
+                            bottom: 0;
+
+                            display: block;
+
+                            width: 0%;
+                            height: 3px;
+
+                            background-color: $color--body-background;
+
+                            transition: .3s;
                         }
                     }
                 }
