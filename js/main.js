@@ -4,7 +4,7 @@ $(document).ready(function () {
     // event listener for "data-role" elements
 
     $("[data-role]").on("click", function () {
-        // get the role attribute of a clicked element ESO <3
+        // get the role attribute of a clicked element
         var role = $(this).attr("data-role");
 
         // checked the role 

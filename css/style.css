@@ -927,8 +927,8 @@ a {
 }
 
 .info {
-  padding-left: calc((100% - 1640px) / 2);
-  padding-right: calc((100% - 1640px) / 2);
+  padding-left: max((100% - 1640px) / 2, 20px);
+  padding-right: max((100% - 1640px) / 2, 20px);
   padding-top: 100px;
   padding-bottom: 100px;
   background-image: url("../img/info/mask.png");
@@ -1355,8 +1355,8 @@ a {
   }
 }
 .projects {
-  padding-left: calc((100% - 1640px) / 2);
-  padding-right: calc((100% - 1640px) / 2);
+  padding-left: max((100% - 1640px) / 2, 20px);
+  padding-right: max((100% - 1640px) / 2, 20px);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -1918,8 +1918,8 @@ a {
   }
 }
 .blog {
-  padding-left: calc((100% - 1640px) / 2);
-  padding-right: calc((100% - 1640px) / 2);
+  padding-left: max((100% - 1640px) / 2, 20px);
+  padding-right: max((100% - 1640px) / 2, 20px);
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #fff;
@@ -2082,8 +2082,8 @@ a {
     aspect-ratio: inherit;
     width: 100% !important;
     height: auto;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding-top: max((100% - 1640px) / 2, 20px) !important;
+    padding-bottom: max((100% - 1640px) / 2, 20px) !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -2302,8 +2302,8 @@ a {
   }
 }
 .footer__below {
-  padding-left: calc((100% - 1640px) / 2);
-  padding-right: calc((100% - 1640px) / 2);
+  padding-left: max((100% - 1640px) / 2, 20px);
+  padding-right: max((100% - 1640px) / 2, 20px);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
