@@ -1,0 +1,65 @@
+.fixed-likns{
+    @include flex(column, center, center);
+ 
+    position: fixed;
+    
+    z-index: 10;
+
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%) translateX(calc(100% - 80px));
+
+    display: block;
+    
+    background-color: $color--body-background;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    box-shadow: 0 0 10px transparentize($color--body-foreground, .8);
+
+    transition: .3s;
+
+    &:hover{
+        transform: translateY(-50%) translateX(0);
+    }
+
+    ul{
+        height: 100%;
+        
+        li{
+            @include flex(row, flex-start, center);
+
+            height: 50%;
+
+            a{
+                @include flex(row, flex-start, center);
+
+                padding: 20px;
+
+                border-bottom: 2px solid #fff;
+                
+                &:last-child{
+                    border: 0;
+                }
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+
+                h2{
+                    margin: 0 20px;
+
+                    font-weight: $fontWeight--normal;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    @include devices(xl){
+        display: none;
+    }
+}

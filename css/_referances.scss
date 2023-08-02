@@ -39,7 +39,7 @@
                     transition: .3s;
     
                     @include devices(xl){
-                        width: 50%;
+                        filter: grayscale(1);
                     }
                 }
             }
