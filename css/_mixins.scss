@@ -120,7 +120,7 @@
     }
   }
 
-  @if $inherit ==ture {
+  @if $inherit ==true {
 
     &::before,
     &::after {

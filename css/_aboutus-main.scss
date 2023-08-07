@@ -1,0 +1,61 @@
+.aboutus-main {
+    @include wrap-big-fluid;
+    @include flex(row, space-between, center);
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    background-image: url("../img/about/about-mask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &__content {
+        width: 40%;
+
+        .title {
+            margin: 40px 0;
+
+            font-size: 2.5rem;
+            font-weight: $fontWeight--bold;
+
+            @include devices(xl) {
+                font-size: 4rem;
+            }
+        }
+
+        .text {
+            font-size: 1.2rem;
+            font-weight: $fontWeight--medium;
+
+            @include devices(xl) {
+                font-size: 2rem;
+            }
+        }
+
+        @include devices(xl){
+            @include flex(column, center, center);
+
+            width: 100%;
+        }
+    }
+
+    &__img {
+        @include aspect(6, 5);
+
+        width: 50%;
+
+        object-fit: cover;
+
+        @include devices(xl) {
+            @include aspect(1, 1);
+
+            width: 100%;
+        }
+    }
+
+    @include devices(xl) {
+        @include wrap-big-fluid;
+        @include flex(column-reverse, center, center);
+    }
+}

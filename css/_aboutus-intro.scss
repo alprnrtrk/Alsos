@@ -1,0 +1,71 @@
+.aboutus-intro {
+    @include wrap-big-fluid;
+    @include flex(row, space-between, flex-start, wrap);
+
+    background-color: $color--section-background;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__img {
+        @include aspect(13, 4);
+
+        width: 100%;
+
+        object-fit: cover;
+
+        transform: translateY(-75px);
+
+        @include devices(xl) {
+            @include aspect(1, 1);
+
+            margin-bottom: 20px;
+
+            transform: translate(0);
+        }
+    }
+
+    &__title {
+        h2 {
+            font-size: 2.5rem;
+            font-weight: $fontWeight--bold;
+
+            &:nth-child(2) {
+                margin-left: 120px;
+
+                @include devices(xl) {
+                    margin: 0;
+
+                    text-align: center;
+                }
+            }
+
+            
+            @include devices(xl) {
+                font-size: 4rem;
+            }
+        }
+        
+        @include devices(xl){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        width: 60%;
+
+        font-size: 1.2rem;
+        font-weight: $fontWeight--medium;
+
+
+        @include devices(xl) {
+            width: 100%;
+
+            font-size: 2rem;
+        }
+    }
+
+    @include devices(xl) {
+        @include flex(column, center, center);
+    }
+}

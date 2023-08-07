@@ -1,0 +1,114 @@
+.aboutus-history {
+    @include wrap-big-fluid;
+    
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-color: $color--section-background;
+    
+    &__title {
+        h2{
+            margin-bottom: 90px;
+
+            font-size: 2.5rem;
+        }
+    }
+
+    &__dates {
+        @include flex(row, space-between, center);
+
+        list-style: none;
+
+        li{
+            button{
+                font-size: 2.5rem;
+                font-weight: $fontWeight--ultra-bold;
+
+                color: transparentize($color--body-foreground, .7);
+                background-color: transparent;
+                
+                border: 0;
+
+                cursor: pointer;
+
+                transition: .3s;
+
+                &.active{
+                    color: $color--body-foreground;
+                }
+            }
+        }
+
+        
+        .lines{
+            position: relative;
+
+            display: block;
+
+            width: 10%;
+            height: 2px;
+
+            background-color: transparentize($color--body-foreground, .7);
+
+            &::before, &::after{
+                content: "";
+
+                position: absolute;
+
+                top: 50%;
+
+                transform: translateY(-50%);
+
+                display: block;
+
+                width: 10px;
+                height: 10px;
+                
+                background-color: transparentize($color--body-foreground, .7);
+
+                border-radius: 100%;
+            }
+
+            &::before{
+                left: 0;
+                transform: translateX(-100%) translateY(-50%);
+            }
+
+            &::after{
+                right: 0;
+                transform: translateX(100%) translateY(-50%);
+            }
+        }
+    }
+
+    &__details{
+        margin-top: 40px;
+
+        list-style: none;;
+
+        .filter-each{
+            width: 0;
+            height: 0;
+
+            visibility: hidden;
+
+            opacity: 0;
+
+            transition: opacity .3s;
+
+            &.active{
+                width: auto;
+                height: auto;
+
+                visibility: visible;
+                
+                opacity: 1;
+            }
+
+            p{
+                font-size: 1rem;
+                font-weight: $fontWeight--medium;
+            }
+        }
+    }
+}

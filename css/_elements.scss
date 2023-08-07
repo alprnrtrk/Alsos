@@ -1,5 +1,65 @@
-.page-start {
+.page-top {
     padding-top: var(--navbar-height);
+
+    &__beared-links{
+        @include flex();
+
+        list-style: none;
+
+        li{
+            margin-right: 0 5px;
+
+            &:first-child{
+                a{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+
+            a{
+                font-size: 1rem;
+                font-weight: $fontWeight--medium;
+                
+                text-transform: capitalize;
+
+                &::before{
+                    content: "/";
+
+                    margin: 0 10px;
+                }
+            }
+        }
+        
+        @include devices(xl){
+            display: none;
+        }
+    }
+
+    &__title{
+        font-weight: $fontWeight--medium;
+
+        text-transform: uppercase;
+        letter-spacing: 5px;
+
+        @include devices(xl){
+            font-size: 3rem;
+        }
+    }
+
+    &.alt{
+        @include wrap-big;
+        @include flex(row, space-between, flex-end);
+
+        margin-top: 100px;
+        margin-bottom: 150px;
+
+        @include devices(xl){
+            @include flex(column, center, center);
+            
+            margin: 30px 0;
+        }
+    }
 }
 
 .btn {
