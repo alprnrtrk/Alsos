@@ -1,0 +1,145 @@
+.contactus-form {
+    @include wrap-big-fluid;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    form {
+        @include flex(row, space-between, flex-start, wrap);
+
+        .half,
+        .full {
+            label {
+                margin-bottom: 10px;
+
+                font-weight: $fontWeight--normal;
+
+                text-transform: capitalize;
+
+                @include devices(xl) {
+                    font-size: 2rem;
+                }
+            }
+
+            input,
+            textarea {
+                width: 100%;
+
+                padding: 15px;
+
+                font-weight: $fontWeight--normal;
+
+                border: 0;
+
+                resize: none;
+
+                @include devices(xl){
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .half {
+            @include flex(column, flex-start, flex-start);
+
+            width: calc(50% - 25px);
+
+            margin-bottom: 50px;
+
+            &.double {
+                @include flex(row, space-between);
+            }
+
+            .inner-half {
+                @include flex(column);
+
+                &:first-child {
+                    width: 140px;
+                }
+
+                &:last-child {
+                    width: calc(100% - 160px);
+                }
+            }
+
+            @include devices(xl) {
+                width: 100%;
+            }
+        }
+
+        .full {
+            @include flex(column);
+
+            width: 100%;
+        }
+
+        .bottom {
+            @include flex(row, space-between, flex-end);
+
+            width: 100%;
+
+            margin-top: 65px;
+
+            #file {
+                width: .1px;
+                height: .1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+            }
+
+            label[for="file"] {
+                @include center;
+
+                width: 100px;
+                height: 100px;
+
+                background-color: $color--other;
+
+                border-radius: 100%;
+
+                cursor: pointer;
+
+                transition: .3s;
+
+                &:hover{
+                    transform: translateY(-10px);
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+
+                    @include devices(xl) {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                @include devices(xl) {
+                    width: 60px;
+                    height: 60px;
+
+                    margin-bottom: 20px;
+                }
+            }
+
+            .btn{
+                border: 0;
+
+                cursor: pointer;
+            }
+
+            @include devices(xl){
+                @include flex(row, space-between, center);
+
+                margin-top: 20px;
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+        }
+    }
+}

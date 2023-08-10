@@ -1,0 +1,125 @@
+.contactus-intro {
+    @include wrap-big-fluid;
+    @include flex(row, space-between, stretch);
+
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    background-color: $color--section-background;
+
+    &__information {
+        width: 50%;
+
+        ul {
+            @include flex(column, space-between);
+
+            height: 100%;
+
+            li {
+                @include flex(row, flex-start, center);
+
+                .icon {
+                    @include center;
+
+                    width: 60px;
+                    height: 60px;
+
+                    border: 3px solid $color--other;
+
+                    border-radius: 100%;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+
+                        @include devices(xl){
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+
+                    @include devices(xl){
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                p {
+                    margin-left: 45px;
+
+                    @include devices(xl){
+                        margin: 0;
+                        margin-top: 20px;
+                        
+                        font-size: 2rem;
+
+                        text-align: center;
+                    }
+                }
+
+                @include devices(xl){
+                    @include flex(column, center, center);
+
+                    margin: 20px 0;
+                }
+            }
+
+            @include devices(xl){
+                @include flex(column, center, center);
+            }
+        }
+
+        
+        @include devices(xl){
+            width: 100%;
+        }
+    }
+
+    &__image {
+        width: 50%;
+
+        padding-left: 100px;
+
+        border-left: 2px solid transparentize($color--body-foreground, .7);
+
+        .wrapper{
+            @include aspect(5,3);
+
+            width: 100%;
+            
+            overflow: hidden;
+
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+    
+                object-fit: cover;
+
+                transition: .3s;
+            }
+
+            @include devices(xl){
+                @include aspect(1,1);
+            }
+        }
+
+        @include devices(xl){
+            width: 100%;
+
+            margin-bottom: 50px;
+            padding-left: 0;
+
+            border: 0
+        }
+    }
+
+    @include devices(xl) {
+        @include flex(column-reverse, center, center);
+    }
+}
