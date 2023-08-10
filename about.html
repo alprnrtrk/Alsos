@@ -108,7 +108,7 @@
         </p>
     </section>
 
-    <section class="aboutus-main">
+    <section id="parallax" class="aboutus-main">
         <div class="aboutus-main__content">
             <h2 class="title">İnce El İşçiliği</h2>
             <p class="text">
@@ -164,9 +164,49 @@
                 </p>
             </li>
         </ul>
-
     </section>
 
+    <section class="numbers">
+        <div class="numbers__title">
+            <h2>
+                Rakamlar
+            </h2>
+        </div>
+        <ul class="numbers__list">
+            <li>
+                <h2 id="counter1">
+                    0
+                </h2>
+                <h3>
+                    Tamamlanan Proje
+                </h3>
+            </li>
+            <li>
+                <h2 id="counter2">
+                    0
+                </h2>
+                <h3>
+                    Özgün Tasarım
+                </h3>
+            </li>
+            <li>
+                <h2 id="counter3">
+                    0
+                </h2>
+                <h3>
+                    Mutlu Müşteri
+                </h3>
+            </li>
+            <li>
+                <h2 id="counter4">
+                    0
+                </h2>
+                <h3>
+                    Saat Çalışma
+                </h3>
+            </li>
+        </ul>
+    </section>
 
     <footer class="footer">
         <div class="footer__upper">
@@ -250,7 +290,24 @@
     <script src="js/swipper-bundle.min.js"></script>
     <script src="js/keyboard.js"></script>
     <script src="js/littlesecret.js"></script>
+    <script src="js/counter.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>        
+        new Counter('#counter1', {
+            target: 568,
+        });
+        new Counter('#counter2', {
+            target: 1856,
+        });
+        new Counter('#counter3', {
+            target: 698,
+        });
+        new Counter('#counter4', {
+            target: 10200,
+        });
+    </script>
+    </script>
 </body>
 
 </html>

@@ -59,6 +59,25 @@
             
             margin: 30px 0;
         }
+
+        &.small{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &.color{
+        @include wrap-big-fluid;
+        @include flex(row, space-between, center);
+
+        margin-top: 50px;
+        padding-bottom: 50px;
+
+        background-color: $color--section-background;
+
+        @include devices(xl){
+            @include flex(column, center, center);
+        }
     }
 }
 
@@ -74,6 +93,8 @@
 
     transition: .3s;
 
+    text-transform: capitalize;
+
     &:hover {
         transform: scale(1.05);
     }
@@ -86,6 +107,17 @@
     &--secondary {
         background-color: $color--other;
         color: $color--primary;
+
+        &.hover{
+            &:hover{
+              background-color: $color--primary;
+              color: $color--body-background;  
+
+              &::after{
+                filter: brightness(100);
+              }
+            }
+        }
     }
 
     &--iconed,
@@ -106,10 +138,12 @@
 
             margin-left: 20px;
 
-            background-image: url(../img/icons/arrow-btn.svg);
+            background-image: url(../img/icons/arrow-btn-colored.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
+
+            filter: brightness(100);
 
             transition: .3s;
 
@@ -121,7 +155,7 @@
 
     &--iconed-colored {
         &::after {
-            background-image: url("../img/icons/arrow-btn-colored.svg");
+            filter: brightness(1);
         }
     }
 

@@ -1,0 +1,48 @@
+.blog-intro {
+    @include wrap-fluid;
+
+    background-color: $color--section-background;
+
+    &__image {
+        @include aspect(16, 5);
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        @include devices(xl) {
+            @include aspect(1, 1);
+        }
+    }
+
+    &__text {
+        @include flex(column, center, center);
+
+        text-align: center;
+
+        padding-bottom: 50px;
+
+        h2 {
+            max-width: 750px;
+            width: 100%;
+
+            margin: 50px 0;
+
+            @include devices(xl) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            max-width: 1300px;
+            width: 100%;
+
+            @include devices(xl) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

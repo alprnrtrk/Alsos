@@ -1,0 +1,23 @@
+.blog-other{
+    &__title{
+        h2{
+
+        }
+    }
+
+    &__slider{
+        .swiper-wrapper{
+            .swiper-slide{
+                a{
+                    img{
+                        width: 100%;
+                    }
+
+                    h2{
+
+                    }
+                }
+            }
+        }
+    }
+}

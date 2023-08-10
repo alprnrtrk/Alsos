@@ -1,0 +1,95 @@
+.numbers{
+    @include wrap-big-fluid;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-color: $color--section-background;
+
+    &__title{
+        h2{
+            margin-bottom: 90px;
+
+            font-size: 2.5rem;
+
+            @include devices(xl){
+                margin-bottom: 30px;
+
+                font-size: 3rem;
+
+                text-align: center;
+            }
+        }
+    }
+
+    &__list{
+        @include flex(row, space-between, center);
+
+        list-style: none;
+
+        li{
+            @include flex(column, center, center);
+            @include aspect(1,1);
+
+            width: calc(calc(100% / 4) - 40px);
+            
+            background-color: $color--body-background;
+
+            border-radius: 35px;
+
+            transition: .3s;
+
+            &:hover{
+                transform: perspective(500px) rotateX(5deg) translateY(-30px);
+                box-shadow: 0 40px 40px -20px transparentize($color--body-foreground, .8);
+
+                h2{
+                    width: 80%;
+                }
+            }
+
+            h2{
+                width: 70%;
+
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                font-size: 3.5rem;
+                font-weight: $fontWeight--bold;
+
+                text-align: center;
+
+                color: transparentize($color--body-foreground, .7);
+
+                border-bottom: 2px solid $color--primary;
+
+                transition: .3s;
+
+                @include devices(xl){
+                    font-size: 7rem;
+                }
+            }
+
+            h3{
+                font-size: 1.2rem;
+                font-weight: $fontWeight--medium;
+
+                text-align: center;
+
+                @include devices(xl){
+                    font-size: 2.5rem;
+                }
+            }
+
+            @include devices(xl){
+                width: 100%;
+
+                margin-bottom: 40px;
+            }
+        }
+
+        @include devices(xl){
+            @include flex(column, center, center);
+        }
+    }
+}

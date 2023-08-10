@@ -1,11 +1,3 @@
-//  :root, :before, :after {
-    
-// }
-
-// @include devices(xxl) {
-
-// }
-
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +16,6 @@
 html,
 body {
     width: 100%;
-    min-height: 100%;
 
     counter-reset: section;
     overflow-x: hidden;
