@@ -79,6 +79,10 @@
             @include flex(column, center, center);
         }
     }
+
+    &.big{
+        padding-bottom: 200px;
+    }
 }
 
 .btn {
@@ -159,6 +163,10 @@
         }
     }
 
+    &--small{
+        padding: 15px 20px;
+    }
+
     @include devices(xl) {
         padding: 10px 20px;
 
@@ -199,12 +207,12 @@
     h2 {
         width: max-content;
 
-        padding: 0 60px;
+        padding: 0 150px;
         margin: auto;
 
         font-size: 2rem;
         font-weight: $fontWeight--ultra-bold;
-        letter-spacing: 2px;
+        letter-spacing: 5px;
 
         text-transform: uppercase;
 
@@ -222,7 +230,7 @@
         padding-bottom: 10vw;
 
         h2{
-            background-image: url(../img/navbar/big-logo.png);
+            background-image: url("../img/navbar/big-logo.png");
             background-position: center center;
             background-size: 50vw 30vw;
             background-repeat: no-repeat;
@@ -245,7 +253,7 @@
             width: 50vw;
             height: 30vw;
 
-            background-image: url(../img/navbar/big-logo.png);
+            background-image: url("../img/navbar/big-logo.png");
             background-position: center center;
             background-size: contain;
             background-repeat: no-repeat;

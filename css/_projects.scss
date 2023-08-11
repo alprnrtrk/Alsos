@@ -1,5 +1,5 @@
 :root {
-    --projects-height: 600px;
+    --projects-height: 550px;
 }
 
 @include devices(xxl) {
@@ -53,7 +53,7 @@
 
                     font-size: 2rem;
                     letter-spacing: 4px;
-                    font-weight: $fontWeight--medium;
+                    font-weight: $fontWeight--normal;
                     text-align: right;
                     text-transform: uppercase;
 
@@ -78,7 +78,7 @@
                     &.active {
                         margin-left: 20px;
 
-                        font-weight: $fontWeight--bold;
+                        font-weight: $fontWeight--semi-bold;
 
                         color: $color--primary;
 
@@ -208,7 +208,7 @@
                                 border-bottom: 1px solid $color--body-background;
 
                                 font-size: .8rem;
-                                font-weight: $fontWeight--medium;
+                                font-weight: $fontWeight--normal;
 
                                 color: $color--body-background;
 
@@ -278,7 +278,7 @@
                     margin: 30px 30px 30px;
 
                     font-size: 2rem;
-                    font-weight: $fontWeight--medium;
+                    font-weight: $fontWeight--normal;
 
                     @include devices(xl){
                         order: -1;

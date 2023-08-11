@@ -91,11 +91,26 @@
             width: calc(50% - 65px);
             height: 100%;
 
-            >img{
+            .wrapper{
                 width: 100%;
                 height: 100%;
                 
-                object-fit: cover;
+                overflow: hidden;
+
+                &:hover{
+                    >img{
+                        transform: scale(1.1);
+                    }
+                }
+
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    
+                    object-fit: cover;
+    
+                    transition: .3s;
+                }
             }
 
             .arrow{

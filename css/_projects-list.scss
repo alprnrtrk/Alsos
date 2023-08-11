@@ -1,0 +1,150 @@
+.projects-list {
+    @include wrap;
+    @include flex(row, space-between, flex-start);
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__filters {
+        @include flex(column, space-between);
+
+        width: 20%;
+        height: 700px;
+
+        border-right: 2px solid transparentize($color--body-foreground, .8);
+
+        ul {
+            list-style: none;
+
+            li {
+                button {
+                    margin-bottom: 20px;
+
+                    font-size: 2rem;
+                    font-weight: $fontWeight--normal;
+
+                    text-transform: capitalize;
+
+                    border: 0;
+
+                    background-color: transparent;
+
+                    cursor: pointer;
+
+                    transition: .3s;
+
+                    &:hover {
+                        margin-left: 5px;
+                        color: transparentize($color--primary, .5);
+
+                        @include devices(xl) {
+                            margin-left: 0;
+                        }
+                    }
+
+                    &.active {
+                        margin-left: 10px;
+                        color: $color--primary;
+
+                        @include devices(xl) {
+                            margin-left: 0;
+                        }
+                    }
+
+
+                    @include devices(xl) {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                @include devices(xl) {
+                    margin: 0 20px;
+                }
+            }
+
+            @include devices(xl) {
+                @include flex(row, flex-start, flex-start, wrap);
+            }
+        }
+
+        h2 {
+            width: min-content;
+
+            font-size: 2rem;
+
+            text-transform: capitalize;
+
+            @include devices(xl) {
+                width: auto;
+                margin-bottom: 40px;
+
+                font-size: 3rem;
+
+                text-align: center;
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column-reverse, center, center);
+
+            width: 100%;
+            height: auto;
+
+            border: 0;
+        }
+    }
+
+    &__items {
+        width: 80%;
+
+        padding-left: 100px;
+
+        .projects__slider {
+            &.active {
+                height: 1250px;
+
+                @include devices(xl) {
+                    height: auto;
+                }
+            }
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    height: calc(calc(100% / 2) - 50px);
+
+                    margin: 0;
+
+                    .btn {
+                        margin-top: 0;
+
+                        @include devices(xl) {
+                            margin: 20px 0;
+                            margin-bottom: 70px;
+                        }
+                    }
+                }
+
+                @include devices(xl) {
+                    @include flex(column);
+                }
+            }
+
+            .buttons {
+                @include devices(xl) {
+                    display: none;
+                }
+            }
+        }
+
+        @include devices(xl) {
+            width: 100%;
+
+            margin-top: 50px;
+            padding: 0;
+        }
+    }
+
+    @include devices(xl) {
+        @include flex(column, center, center);
+    }
+}

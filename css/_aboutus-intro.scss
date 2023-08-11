@@ -54,8 +54,10 @@
     &__text {
         width: 60%;
 
+        margin-bottom: 50px;
+
         font-size: 1.2rem;
-        font-weight: $fontWeight--medium;
+        font-weight: $fontWeight--normal;
 
 
         @include devices(xl) {

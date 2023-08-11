@@ -79,6 +79,21 @@
             width: 100%;
 
             margin-top: 65px;
+            
+            .file{
+                @include flex(row, flex-start, center);
+
+                h2{
+                    font-size: 1rem;
+                    font-weight: $fontWeight--normal;
+
+                    margin-left: 30px;
+
+                    @include devices(xl){
+                        display: none;
+                    }
+                }
+            }
 
             #file {
                 width: .1px;
@@ -95,7 +110,7 @@
                 width: 100px;
                 height: 100px;
 
-                background-color: $color--other;
+                background-color: $color--section-background;
 
                 border-radius: 100%;
 

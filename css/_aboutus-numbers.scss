@@ -92,4 +92,9 @@
             @include flex(column, center, center);
         }
     }
+    
+    @include devices(xl){
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }

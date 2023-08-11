@@ -10,7 +10,7 @@
         list-style: none;
 
         li {
-            @include flex(row, space-between, stretch);
+            @include flex(row, space-between, center);
 
             padding-top: 50px;
             padding-bottom: 50px;
@@ -27,7 +27,7 @@
                 width: calc(50% - 45px);
 
                 h2 {
-                    font-size: 2rem;
+                    font-size: 1.7rem;
 
                     @include devices(xl) {
                         font-size: 3rem;
@@ -44,7 +44,7 @@
                 }
 
                 a {
-                    margin-top: auto;
+                    margin-top: 25px;
                 }
 
                 @include devices(xl) {

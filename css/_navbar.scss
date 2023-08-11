@@ -148,6 +148,8 @@
 
                         margin: 0 calc(var(--navbar-navsGap) / 2);
 
+                        font-weight: $fontWeight--bold;
+
                         color: $color--body-background;
 
                         &:hover {

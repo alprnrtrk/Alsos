@@ -27,7 +27,7 @@
 
         .text {
             font-size: 1.2rem;
-            font-weight: $fontWeight--medium;
+            font-weight: $fontWeight--normal;
 
             @include devices(xl) {
                 font-size: 2rem;
