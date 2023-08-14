@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alsos/Anasayfa</title>
+    <title>Alsos/Hakkımızda</title>
 
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,12 +13,12 @@
 <body>
     <header class="navbar">
         <div class="navbar__left">
-            <a class="logo" href="#">
+            <a class="logo" href="index.html">
                 <img src="img/navbar/logo.svg" alt="brand logo">
             </a>
             <h2 class="quote">ahşap tasarım uygulama</h2>
 
-            <button class="toggler" data-role="toggler" data-target=".navbar__right">
+            <button aria-label="menu toggler" class="toggler" data-role="toggler" data-target=".navbar__right">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -26,35 +26,35 @@
             <ul class="navs">
                 <li class="each">
                     <nav>
-                        <a href="#" class="active">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="about.html" class="active">
                             kurumsal
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </nav>
@@ -62,14 +62,14 @@
             </ul>
             <div class="lang">
                 <h2 class="active-lang">
-                    <a href="#">tr</a>
+                    <a href="404.html">tr</a>
                 </h2>
                 <ul class="lang-list">
                     <li class="each">
-                        <a href="#">en</a>
+                        <a href="404.html">en</a>
                     </li>
                     <li class="each">
-                        <a href="#">nt</a>
+                        <a href="404.html">nt</a>
                     </li>
                 </ul>
             </div>
@@ -79,10 +79,10 @@
     <section class="page-top alt">
         <ul class="page-top__beared-links">
             <li>
-                <a href="404.html">ana sayfa</a>
+                <a href="index.html">ana sayfa</a>
             </li>
             <li>
-                <a href="404.html">kurumsal</a>
+                <a href="about.html">kurumsal</a>
             </li>
         </ul>
         <h2 class="page-top__title">
@@ -91,7 +91,7 @@
     </section>
 
     <section class="aboutus-intro">
-        <img class="aboutus-intro__img" src="img/about/1.png" alt="">
+        <img class="aboutus-intro__img" src="img/about/1.png" alt="image explanation">
         <div class="aboutus-intro__title">
             <h2>Tasarlamayı</h2>
             <h2>Seviyoruz</h2>
@@ -119,7 +119,7 @@
                 gurur duyuyoruz.
             </p>
         </div>
-        <img class="aboutus-main__img" src="img/about/2.png" alt="">
+        <img class="aboutus-main__img" src="img/about/2.png" alt="image explanation">
     </section>
 
     <section class="aboutus-history">
@@ -127,16 +127,20 @@
             <h2>Tarihçemiz</h2>
         </div>
         <ul class="aboutus-history__dates">
-            <li><button data-value=".filter-each" data-role="filter" data-target="#2009">2009</button></li>
+            <!-- yalnızca 3 adet tarih girilebilir -->
+            <!-- data-value filtrelenen class gruplarının adı olmalı -->
+            <!-- data-target ise filtrelenecek elementin id'si -->
+            <li><button data-value=".filter-each" data-role="filter" data-target="#2009" class="active">2009</button></li>
             <span class="lines"></span>
-            <li><button data-value=".filter-each" data-role="filter" data-target="#2018" class="active">2018</button>
+            <li><button data-value=".filter-each" data-role="filter" data-target="#2018">2018</button>
             </li>
             <span class="lines"></span>
             <li><button data-value=".filter-each" data-role="filter" data-target="#2023">2023</button></li>
         </ul>
 
         <ul class="aboutus-history__details">
-            <li id="2009" class="filter-each">
+            <!-- class adları ve id ler yukarıdaki liste ile uyumlu olmalı -->
+            <li id="2009" class="filter-each active">
                 <p> 2009 -- Alsos Ahşap büyüyen kadrosu ve yeni yönetim kuruluyla Modoko’da gelişmiş makine parkuru ile
                     2018 yılında üretim ve tasarımlarına hız verdi. Bu dönemde Fit-Out ofis ve konut projelerinde öncü
                     tasarımlara imza atarak sektörde tanınan bir üretici olmayı başardı. Gelişen teknoloji ve tasarım
@@ -145,7 +149,7 @@
                     hedefliyor….
                 </p>
             </li>
-            <li id="2018" class="filter-each active">
+            <li id="2018" class="filter-each">
                 <p> 2018 -- Alsos Ahşap büyüyen kadrosu ve yeni yönetim kuruluyla Modoko’da gelişmiş makine parkuru ile
                     2018 yılında üretim ve tasarımlarına hız verdi. Bu dönemde Fit-Out ofis ve konut projelerinde öncü
                     tasarımlara imza atarak sektörde tanınan bir üretici olmayı başardı. Gelişen teknoloji ve tasarım
@@ -211,38 +215,38 @@
     <footer class="footer">
         <div class="footer__upper">
             <div class="left">
-                <a href="#">
-                    <img src="img/navbar/logo.svg" alt="">
+                <a href="index.html">
+                    <img src="img/navbar/logo.svg" alt="brand logo">
                 </a>
                 <h2>size nasıl yardımcı olabiliriz</h2>
-                <a class="btn btn--secondary btn--iconed-colored" href="#">
+                <a class="btn btn--secondary btn--iconed-colored" href="contact-us.html">
                     soru sorun
                 </a>
             </div>
             <div class="right">
                 <ul class="navs">
                     <li>
-                        <a href="#">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </li>
@@ -263,8 +267,8 @@
         <div class="footer__below">
             <h2>Copyright © 2023 Alsos</h2>
             <div class="links">
-                <a href="#">KVKK</a>
-                <a href="#">Çerez Politikası</a>
+                <a href="kvkk.html">KVKK</a>
+                <a href="cookies.html">Çerez Politikası</a>
             </div>
         </div>
     </footer>
@@ -272,14 +276,14 @@
     <section class="fixed-likns">
         <ul>
             <li>
-                <a href="#">
-                    <img src="img/icons/wp.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/wp.svg" alt="whatsapp icon">
                     <h2>+90 000 00 00</h2>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <img src="img/icons/mail.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/mail.svg" alt="mail icon">
                     <h2>loremipsum@lorem.com.tr</h2>
                 </a>
             </li>
@@ -294,6 +298,7 @@
     <script src="js/main.js"></script>
 
     <script>
+        // geri sayım için lazım olan kodlar
         new Counter('#counter1', {
             target: 568,
         });

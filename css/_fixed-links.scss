@@ -6,16 +6,16 @@
     z-index: 10;
 
     top: 50%;
-    right: 0;
+    left: 0;
 
-    transform: translateY(-50%) translateX(calc(100% - 80px));
+    transform: translateY(-50%) translateX(calc(-100% + 80px));
 
     display: block;
     
     background-color: $color--body-background;
 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 
     box-shadow: 0 0 10px transparentize($color--body-foreground, .8);
 
@@ -29,12 +29,12 @@
         height: 100%;
         
         li{
-            @include flex(row, flex-start, center);
+            @include flex(row, flex-end, center);
 
             height: 50%;
 
             a{
-                @include flex(row, flex-start, center);
+                @include flex(row-reverse, flex-start, center);
 
                 padding: 20px;
 

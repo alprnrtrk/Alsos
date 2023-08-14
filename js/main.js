@@ -17,6 +17,9 @@ $(document).ready(function () {
             case "filter":
                 filter(this);
                 break;
+            case "subFilter":
+                subFilter(this);
+                break;
         }
     })
 })
@@ -38,11 +41,26 @@ function playPause(object) {
         $(target).trigger('pause');
     }
 }
+
 function filter(object) {
     let target = $(object).attr("data-target");
     let group = $(object).attr("data-value");
     $(group).removeClass("active");
-    $(target).addClass("active");
     $('[data-role = "filter"]').removeClass("active");
     $(object).addClass("active");
+
+    if($('[data-target="done"]').hasClass("active")){
+        $('[data-id="'+ target +'"][data-status="done"]').addClass("active");
+        console.log("done");
+    }else if($('[data-target="ongoin"]').hasClass("active")){
+        $('[data-id="'+ target +'"][data-status="ongoin"]').addClass("active");
+        console.log("ongoin");
+    }
+}
+
+function subFilter(object){
+    $('[data-role = "subFilter"]').removeClass("active");
+    $(object).addClass("active");
+
+    $('[data-role="filter"].active').click();
 }

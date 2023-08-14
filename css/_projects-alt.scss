@@ -1,0 +1,137 @@
+.project-alt {
+    transform: translateY(-150px);
+    margin-bottom: -150px;
+
+    &__img {
+        @include wrap-fluid();
+        @include aspect(16, 6);
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        @include devices(xl) {
+            @include aspect(1, 1);
+        }
+    }
+
+    &__text {
+        @include wrap-big();
+        @include flex(row, space-between, stretch, wrap);
+
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .left {
+            width: calc(50% - 25px);
+
+            h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+
+                @include devices(xl) {
+                    font-size: 3rem;
+
+                    text-align: center;
+                }
+            }
+
+            p {
+                line-height: 27px;
+
+                @include devices(xl) {
+                    font-size: 2rem;
+
+                    line-height: normal;
+                }
+            }
+
+
+            @include devices(xl) {
+                width: 100%;
+
+                margin-bottom: 50px;
+            }
+        }
+
+        .right {
+            width: calc(50% - 25px);
+
+            padding: 30px 70px;
+
+            background-color: $color--secondary;
+            color: $color--body-background;
+
+            h2 {
+                font-size: 1rem;
+
+
+                @include devices(xl){
+                    font-size: 2rem;
+                }
+            }
+
+            ul {
+                min-height: 100%;
+
+                list-style: none;
+
+                li {
+                    @include flex(row, flex-start, center);
+
+                    width: 100%;
+
+                    margin-top: 30px;
+                    padding-bottom: 15px;
+
+                    border-bottom: 1px solid $color--body-background;
+
+                    .terms {
+                        @include flex();
+
+                        width: 40%;
+
+                        font-weight: $fontWeight--bold;
+
+                        &::after {
+                            content: ":";
+
+                            display: block;
+
+                            margin-left: auto;
+                        }
+                        
+                        @include devices(xl){
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .desc {
+                        width: 60%;
+
+                        margin-left: 10px;
+
+                        font-weight: $fontWeight--semi-bold;
+
+                        @include devices(xl){
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+
+            @include devices(xl) {
+                width: 100%;
+
+                padding: 20px 10px;
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+        }
+    }
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alsos/Anasayfa</title>
+    <title>Alsos/Projelerimiz</title>
 
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,12 +13,12 @@
 <body>
     <header class="navbar">
         <div class="navbar__left">
-            <a class="logo" href="#">
+            <a class="logo" href="index.html">
                 <img src="img/navbar/logo.svg" alt="brand logo">
             </a>
             <h2 class="quote">ahşap tasarım uygulama</h2>
 
-            <button class="toggler" data-role="toggler" data-target=".navbar__right">
+            <button aria-label="menu toggler" class="toggler" data-role="toggler" data-target=".navbar__right">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -26,35 +26,35 @@
             <ul class="navs">
                 <li class="each">
                     <nav>
-                        <a href="#" class="active">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="projects.html"  class="active">
                             projelerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </nav>
@@ -62,14 +62,14 @@
             </ul>
             <div class="lang">
                 <h2 class="active-lang">
-                    <a href="#">tr</a>
+                    <a href="404.html">tr</a>
                 </h2>
                 <ul class="lang-list">
                     <li class="each">
-                        <a href="#">en</a>
+                        <a href="404.html">en</a>
                     </li>
                     <li class="each">
-                        <a href="#">nt</a>
+                        <a href="404.html">nt</a>
                     </li>
                 </ul>
             </div>
@@ -94,172 +94,140 @@
         <div class="projects-list__filters">
             <ul>
                 <li>
-                    <button data-role="filter" data-target="#magaza" data-value=".filter-each" data-role="filter"
-                        data-target="magaza" data-value=".filter-each" class="active">mağaza</button>
+                    <!-- 4 filtre olacak şekilde tasarnaldı -->
+                    <!-- data-value değerine filtrelenecek elementin class'ı yazılmalı -->
+                    <!-- data-target ise filtrelenecek elementin id'si olmalı  -->
+                    <button data-role="filter" data-target="magaza" data-value=".filter-each" class="active">mağaza</button>
                 </li>
                 <li>
-                    <button data-role="filter" data-target="#mobilya" data-value=".filter-each">mobilya</button>
+                    <button data-role="filter" data-target="mobilya" data-value=".filter-each">mobilya</button>
                 </li>
                 <li>
-                    <button data-role="filter" data-target="#oturmaodasi" data-value=".filter-each">oturma
+                    <button data-role="filter" data-target="oturmaodasi" data-value=".filter-each">oturma
                         odası</button>
                 </li>
                 <li>
-                    <button data-role="filter" data-target="#tasarim" data-value=".filter-each">tasarım</button>
+                    <button data-role="filter" data-target="tasarim" data-value=".filter-each">tasarım</button>
                 </li>
             </ul>
             <h2>atölye eserlerimizi keşfedin</h2>
         </div>
         <div class="projects-list__items">
+            <div class="sub-filter">
+                <button data-role="subFilter" data-target="done" data-value=".filter-each"
+                    class="active">tamamlanan</button>
+                <button data-role="subFilter" data-target="ongoin" data-value=".filter-each">devam eden</button>
+            </div>
             <div class="items">
-                <div id="magaza" class="swiper projects__slider filter-each active">
+                <!-- data-id ile yukarıdaki data-target ile aynı olmalı  ayrıca her kategorinin bir data-status ongoin veya done olmalı ki biten ve yapım aşamasında olup olmaduğu şeklinde filtrelernsin  -->
+                <!-- aynı proje listesinin bir adet done versiyonu -->
+                <!-- bir adet ise ongoin versiyonu çekilmeli -->
+                <div data-id="magaza" data-status="done" class="swiper projects__slider filter-each active">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                     </div>
                     <div class="buttons">
@@ -267,154 +235,49 @@
                         <button class="button-next"></button>
                     </div>
                 </div>
-                <div id="mobilya" class="swiper projects__slider filter-each">
+                <div data-id="magaza" data-status="ongoin" class="swiper projects__slider filter-each">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>12222THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                     </div>
                     <div class="buttons">
@@ -422,154 +285,112 @@
                         <button class="button-next"></button>
                     </div>
                 </div>
-                <div id="oturmaodasi" class="swiper projects__slider filter-each">
+                <div data-id="mobilya" data-status="ongoin" class="swiper projects__slider filter-each">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
-                                <div class="panel">
-                                    <ul>
-                                        <li>
-                                            <img src="img/icons/type.svg" alt="">
-                                            <h2>Ankastre Mutfak</h2>
-                                        </li>
-                                        <li>
-                                            <img src="img/icons/location.svg" alt="">
-                                            <h2>İstanbul</h2>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h2>THYSSENKRUPP</h2>
-
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                     </div>
                     <div class="buttons">
@@ -577,154 +398,564 @@
                         <button class="button-next"></button>
                     </div>
                 </div>
-                <div id="tasarim" class="swiper projects__slider filter-each">
+                <div data-id="mobilya" data-status="done" class="swiper projects__slider filter-each">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button-prev"></button>
+                        <button class="button-next"></button>
+                    </div>
+                </div>
+                <div data-id="oturmaodasi" data-status="ongoin" class="swiper projects__slider filter-each">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                         <div class="swiper-slide">
                             <div class="wrapper">
-                                <img src="img/projects/1.png" alt="">
+                                <img src="img/projects/1.png" alt="image explaniation">
                                 <div class="panel">
                                     <ul>
                                         <li>
-                                            <img src="img/icons/type.svg" alt="">
+                                            <img src="img/icons/type.svg" alt="image explaniation">
                                             <h2>Ankastre Mutfak</h2>
                                         </li>
                                         <li>
-                                            <img src="img/icons/location.svg" alt="">
+                                            <img src="img/icons/location.svg" alt="image explaniation">
                                             <h2>İstanbul</h2>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h2>THYSSENKRUPP</h2>
+                            <h2>111THYSSENKRUPP</h2>
 
-                            <a href="#" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button-prev"></button>
+                        <button class="button-next"></button>
+                    </div>
+                </div>
+                <div data-id="oturmaodasi" data-status="done" class="swiper projects__slider filter-each">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button-prev"></button>
+                        <button class="button-next"></button>
+                    </div>
+                </div>
+                <div data-id="tasarim" data-status="ongoin" class="swiper projects__slider filter-each">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button-prev"></button>
+                        <button class="button-next"></button>
+                    </div>
+                </div>
+                <div data-id="tasarim" data-status="done" class="swiper projects__slider filter-each">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrapper">
+                                <img src="img/projects/1.png" alt="image explaniation">
+                                <div class="panel">
+                                    <ul>
+                                        <li>
+                                            <img src="img/icons/type.svg" alt="image explaniation">
+                                            <h2>Ankastre Mutfak</h2>
+                                        </li>
+                                        <li>
+                                            <img src="img/icons/location.svg" alt="image explaniation">
+                                            <h2>İstanbul</h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>111THYSSENKRUPP</h2>
+
+                            <a href="projects-alt.html" class="btn btn--secondary hover btn--iconed-colored btn--small">ürünü incele</a>
                         </div>
                     </div>
                     <div class="buttons">
@@ -740,38 +971,38 @@
     <footer class="footer">
         <div class="footer__upper">
             <div class="left">
-                <a href="#">
-                    <img src="img/navbar/logo.svg" alt="">
+                <a href="index.html">
+                    <img src="img/navbar/logo.svg" alt="brand logo">
                 </a>
                 <h2>size nasıl yardımcı olabiliriz</h2>
-                <a class="btn btn--secondary hover btn--iconed-colored btn--small" href="#">
+                <a class="btn btn--secondary btn--iconed-colored" href="contact-us.html">
                     soru sorun
                 </a>
             </div>
             <div class="right">
                 <ul class="navs">
                     <li>
-                        <a href="#">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </li>
@@ -792,8 +1023,8 @@
         <div class="footer__below">
             <h2>Copyright © 2023 Alsos</h2>
             <div class="links">
-                <a href="#">KVKK</a>
-                <a href="#">Çerez Politikası</a>
+                <a href="kvkk.html">KVKK</a>
+                <a href="cookies.html">Çerez Politikası</a>
             </div>
         </div>
     </footer>
@@ -801,14 +1032,14 @@
     <section class="fixed-likns">
         <ul>
             <li>
-                <a href="#">
-                    <img src="img/icons/wp.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/wp.svg" alt="whatsapp icon">
                     <h2>+90 000 00 00</h2>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <img src="img/icons/mail.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/mail.svg" alt="mail icon">
                     <h2>loremipsum@lorem.com.tr</h2>
                 </a>
             </li>
@@ -824,10 +1055,16 @@
 
     <script>
 
+        var swiper = Swiper;
         var init = false;
-        var swiper;
-        function swiperCard() {
-            if (window.innerWidth >= 768) {
+
+        function swiperMode() {
+
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+            let tablet = window.matchMedia('(min-width: 769px) and (max-width: 1024px)');
+            let desktop = window.matchMedia('(min-width: 1025px)');
+
+            if (desktop.matches) {
                 if (!init) {
                     init = true;
                     swiper = new Swiper(".projects__slider", {
@@ -842,22 +1079,34 @@
                         breakpoints: {
                             1200: {
                                 slidesPerView: 2,
-                                spaceBetween: 50,
+                                spaceBetween: 30,
                             }
                         },
-
                         grid: {
                             rows: 2,
                         },
                     });
                 }
-            } else if (init) {
-                swiper.destroy();
-                init = false;
+
+                else if (tablet.matches) {
+                    swiper.destroy();
+                    init = false;
+                }
+
+                else if (mobile.matches) {
+                    swiper.destroy();
+                    init = false;
+                }
             }
         }
-        swiperCard();
-        window.addEventListener("resize", swiperCard);
+
+        window.addEventListener('load', function () {
+            swiperMode();
+        });
+
+        window.addEventListener('resize', function () {
+            swiperMode();
+        });
     </script>
 </body>
 

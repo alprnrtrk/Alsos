@@ -1,0 +1,152 @@
+.project-gallery {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: $color--section-background;
+
+    &__title {
+        @include wrap-big;
+
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 2rem;
+
+            @include devices(xl){
+                font-size: 3rem;
+
+                text-align: center;
+            }
+        }
+    }
+
+    &__images {
+        @include wrap;
+        @include flex(row, space-between, stretch);
+
+        position: relative;
+
+        list-style: none;
+
+        li {
+            width: calc(100% / 3 - 20px);
+
+
+            @include devices(xl) {
+                width: 100%;
+
+                margin-bottom: 20px;
+            }
+        }
+
+        .content-box {
+            @include flex(column, center, center);
+
+            padding: 30px;
+
+            background-color: $color--primary;
+            color: $color--body-background;
+
+            h2 {
+                font-size: 2rem;
+
+                text-transform: uppercase;
+
+                @include devices(xl){
+                    font-size: 3rem;
+                }
+            }
+
+            p {
+                margin: 50px 0;
+                text-align: center;
+
+                @include devices(xl){
+                    margin: 20px 0;
+
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .image {
+            @include aspect(54, 40);
+
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                transition: .3s;
+            }
+        }
+
+        .goto-gallery {
+            @include center;
+
+            position: absolute;
+
+            top: 50%;
+            right: 0;
+
+            transform: translateY(-50%) translateX(50%);
+
+            width: 100px;
+            height: 100px;
+
+            background-color: $color--section-background;
+
+            border-radius: 100%;
+
+            transition: .3s;
+
+            &:hover {
+                width: 120px;
+                height: 120px;
+
+                img {
+                    padding: 25px;
+                }
+            }
+
+            img {
+                @include aspect(1, 1);
+
+                padding: 20px;
+
+                border: 4px solid $color--body-background;
+
+                border-radius: 100%;
+
+                transition: .3s;
+                transition-delay: .1s;
+
+                @include devices(xl){
+                    transform: rotate(90deg);
+                }
+            }
+
+            @include devices(xxl) {
+                transform: translateY(-50%) translateX(0);
+            }
+
+            @include devices(xl){
+                top: 100%;
+                left: 50%;
+
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+        }
+    }
+}

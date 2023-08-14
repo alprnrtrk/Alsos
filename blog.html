@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alsos/Anasayfa</title>
+    <title>Alsos/Blog Listesi</title>
 
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,12 +13,12 @@
 <body>
     <header class="navbar">
         <div class="navbar__left">
-            <a class="logo" href="#">
+            <a class="logo" href="index.html">
                 <img src="img/navbar/logo.svg" alt="brand logo">
             </a>
             <h2 class="quote">ahşap tasarım uygulama</h2>
 
-            <button class="toggler" data-role="toggler" data-target=".navbar__right">
+            <button aria-label="menu toggler" class="toggler" data-role="toggler" data-target=".navbar__right">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -26,35 +26,35 @@
             <ul class="navs">
                 <li class="each">
                     <nav>
-                        <a href="#" class="active">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </nav>
@@ -62,14 +62,14 @@
             </ul>
             <div class="lang">
                 <h2 class="active-lang">
-                    <a href="#">tr</a>
+                    <a href="404.html">tr</a>
                 </h2>
                 <ul class="lang-list">
                     <li class="each">
-                        <a href="#">en</a>
+                        <a href="404.html">en</a>
                     </li>
                     <li class="each">
-                        <a href="#">nt</a>
+                        <a href="404.html">nt</a>
                     </li>
                 </ul>
             </div>
@@ -79,10 +79,10 @@
     <section class="page-top alt small">
         <ul class="page-top__beared-links">
             <li>
-                <a href="404.html">ana sayfa</a>
+                <a href="index.html">ana sayfa</a>
             </li>
             <li>
-                <a href="404.html">blog</a>
+                <a href="blog.html">blog</a>
             </li>
         </ul>
         <h2 class="page-top__title">
@@ -98,12 +98,13 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam…
                     </p>
-                    <a class="btn btn--secondary btn--iconed-colored hover" href="#">yazıya git</a>
-                </div>     
+                    <a class="btn btn--secondary btn--iconed-colored hover" href="blog-alt.html">yazıya git</a>
+                </div>
                 <div class="image">
-                    <img src="img/blog/1.png" alt="">
+                    <img src="img/blog/1.png" alt="image explaniation">
                 </div>
             </li>
             <li>
@@ -112,12 +113,13 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam…
                     </p>
-                    <a class="btn btn--secondary btn--iconed-colored hover" href="#">yazıya git</a>
-                </div>     
+                    <a class="btn btn--secondary btn--iconed-colored hover" href="blog-alt.html">yazıya git</a>
+                </div>
                 <div class="image">
-                    <img src="img/blog/2.png" alt="">
+                    <img src="img/blog/2.png" alt="image explaniation">
                 </div>
             </li>
             <li>
@@ -126,34 +128,39 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam…
                     </p>
-                    <a class="btn btn--secondary btn--iconed-colored hover" href="#">yazıya git</a>
-                </div>     
+                    <a class="btn btn--secondary btn--iconed-colored hover" href="blog-alt.html">yazıya git</a>
+                </div>
                 <div class="image">
-                    <img src="img/blog/3.png" alt="">
+                    <img src="img/blog/3.png" alt="image explaniation">
                 </div>
             </li>
         </ul>
         <ul class="pagination">
             <!-- sayfa dinamik ise button statik yeni sayfa gelecek ise a yı kullanabilirsin ikisininde görünümü aynı olacak şekilde yazdım -->
             <li class="prev">
-                <button><img src="img/icons/arrow-l.svg" alt=""></button>
+                <button><img src="img/icons/arrow-l.svg" alt="image explaniation"></button>
             </li>
             <li class="each">
                 <button>1</button>
             </li>
-            
+
             <li class="each">
-                <a href="#">2</a>
+                <a href="blog.html">2</a>
             </li>
-            
+
             <li class="each">
-                <a href="#">3</a>
+                <a href="blog.html">...</a>
+            </li>
+
+            <li class="each">
+                <a href="blog.html">3</a>
             </li>
 
             <li class="next">
-                <button><img src="img/icons/arrow-r.svg" alt=""></button>
+                <button><img src="img/icons/arrow-r.svg" alt="image explaniation"></button>
             </li>
         </ul>
     </section>
@@ -161,38 +168,38 @@
     <footer class="footer">
         <div class="footer__upper">
             <div class="left">
-                <a href="#">
-                    <img src="img/navbar/logo.svg" alt="">
+                <a href="index.html">
+                    <img src="img/navbar/logo.svg" alt="brand logo">
                 </a>
                 <h2>size nasıl yardımcı olabiliriz</h2>
-                <a class="btn btn--secondary btn--iconed-colored" href="#">
+                <a class="btn btn--secondary btn--iconed-colored" href="contact-us.html">
                     soru sorun
                 </a>
             </div>
             <div class="right">
                 <ul class="navs">
                     <li>
-                        <a href="#">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </li>
@@ -213,8 +220,8 @@
         <div class="footer__below">
             <h2>Copyright © 2023 Alsos</h2>
             <div class="links">
-                <a href="#">KVKK</a>
-                <a href="#">Çerez Politikası</a>
+                <a href="kvkk.html">KVKK</a>
+                <a href="cookies.html">Çerez Politikası</a>
             </div>
         </div>
     </footer>
@@ -222,14 +229,14 @@
     <section class="fixed-likns">
         <ul>
             <li>
-                <a href="#">
-                    <img src="img/icons/wp.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/wp.svg" alt="whatsapp icon">
                     <h2>+90 000 00 00</h2>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <img src="img/icons/mail.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/mail.svg" alt="mail icon">
                     <h2>loremipsum@lorem.com.tr</h2>
                 </a>
             </li>

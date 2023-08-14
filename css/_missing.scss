@@ -1,0 +1,27 @@
+.missing{
+    @include wrap;
+    @include flex(column, center, center);
+
+    padding-top: var(--navbar-height);
+
+    min-height: 70vh;
+
+    h1{
+        margin: 0;
+
+        font-size: 5rem;
+        font-weight: $fontWeight--black;
+        color: transparentize($color--body-foreground, .8);
+        text-transform: uppercase;
+    }  
+
+    h2{
+        margin: 50px 0;
+
+        font-size: 2rem;
+
+        color: transparentize($color--body-foreground, .8);
+
+        text-transform: capitalize;
+    }
+}

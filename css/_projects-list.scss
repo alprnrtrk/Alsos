@@ -96,23 +96,75 @@
 
     &__items {
         width: 80%;
+        height: 100%;
 
         padding-left: 100px;
 
-        .projects__slider {
-            &.active {
-                height: 1250px;
+        overflow: hidden;
 
-                @include devices(xl) {
+        .sub-filter {
+            @include flex(row, flex-end);
+
+            margin-bottom: 20px;
+
+            button {
+                margin: 0 20px;
+
+                font-weight: $fontWeight--medium;
+
+                text-transform: capitalize;
+
+                background-color: transparent;
+                border: 0;
+
+                cursor: pointer;
+
+                transition: .3s;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+
+                &.active {
+                    color: $color--primary;
+                }
+
+                @include devices(xl){
+                    margin-bottom: 20px;
+
+                    font-size: 2.5rem;
+                }
+            }
+
+            @include devices(xl){
+                @include flex(column, center, center);
+            }
+        }
+
+        .projects__slider {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+
+            transition: .3s opacity;
+
+            &.active{
+                width: auto;
+                height: 1300px;
+
+                opacity: 1;
+                visibility: visible;
+
+                @include devices(xl){
                     height: auto;
                 }
             }
 
             .swiper-wrapper {
                 .swiper-slide {
-                    height: calc(calc(100% / 2) - 50px);
-
-                    margin: 0;
+                    height: calc(50% - 50px);
+                    margin-top: 0!important;
 
                     .btn {
                         margin-top: 0;
@@ -122,9 +174,13 @@
                             margin-bottom: 70px;
                         }
                     }
+
+                    @include devices(xl){
+                        height: auto;
+                    }
                 }
 
-                @include devices(xl) {
+                @include devices(xl ) {
                     @include flex(column);
                 }
             }

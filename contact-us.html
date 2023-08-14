@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alsos/Anasayfa</title>
+    <title>Alsos/İletişim</title>
 
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,12 +13,12 @@
 <body>
     <header class="navbar">
         <div class="navbar__left">
-            <a class="logo" href="#">
+            <a class="logo" href="index.html">
                 <img src="img/navbar/logo.svg" alt="brand logo">
             </a>
             <h2 class="quote">ahşap tasarım uygulama</h2>
 
-            <button class="toggler" data-role="toggler" data-target=".navbar__right">
+            <button aria-label="menu toggler" class="toggler" data-role="toggler" data-target=".navbar__right">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -26,35 +26,35 @@
             <ul class="navs">
                 <li class="each">
                     <nav>
-                        <a href="#" class="active">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </nav>
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="#">
+                        <a href="contact-us.html"  class="active">
                             iletişim
                         </a>
                     </nav>
@@ -62,14 +62,14 @@
             </ul>
             <div class="lang">
                 <h2 class="active-lang">
-                    <a href="#">tr</a>
+                    <a href="404.html">tr</a>
                 </h2>
                 <ul class="lang-list">
                     <li class="each">
-                        <a href="#">en</a>
+                        <a href="404.html">en</a>
                     </li>
                     <li class="each">
-                        <a href="#">nt</a>
+                        <a href="404.html">nt</a>
                     </li>
                 </ul>
             </div>
@@ -79,10 +79,10 @@
     <section class="page-top alt small">
         <ul class="page-top__beared-links">
             <li>
-                <a href="404.html">ana sayfa</a>
+                <a href="index.html">ana sayfa</a>
             </li>
             <li>
-                <a href="404.html">iletişim</a>
+                <a href="contact-us.html">iletişim</a>
             </li>
         </ul>
         <h2 class="page-top__title">
@@ -95,25 +95,25 @@
             <ul>
                 <li>
                     <div class="icon">
-                        <img src="img/icons/location-2.svg" alt="">
+                        <img src="img/icons/location-2.svg" alt="image explaniation">
                     </div>
                     <p>Şerifali Barbaros cd. Dergah sk. 34775 <br> No: 17 Ümraniye / İstanbul</p>
                 </li>
                 <li>
                     <div class="icon">
-                        <img src="img/icons/mail.svg" alt="">
+                        <img src="img/icons/mail.svg" alt="image explaniation">
                     </div>
                     <p>info@alsosahsap.com</p>
                 </li>
                 <li>
                     <div class="icon">
-                        <img src="img/icons/phone.svg" alt="">
+                        <img src="img/icons/phone.svg" alt="image explaniation">
                     </div>
                     <p>+90 535 445 36 51 <br> +90 535 445 36 51</p>
                 </li>
                 <li>
                     <div class="icon">
-                        <img src="img/icons/cloack.svg" alt="">
+                        <img src="img/icons/cloack.svg" alt="image explaniation">
                     </div>
                     <p>Pazartesi-Cuma: 8:30 – 18:00 <br> Cumartesi: 9:00 – 15:00</p>
                 </li>
@@ -121,7 +121,7 @@
         </div>
         <div class="contactus-intro__image">
             <div class="wrapper">
-                <img src="img/contact-us/1.png" alt="">
+                <img src="img/contact-us/1.png" alt="image explaniation">
             </div>
         </div>
     </section>
@@ -132,22 +132,22 @@
                 <label for="fullname">ad soyad</label>
                 <input type="text" aria-label="fullname" name="fullname" id="fullname">
             </div>
-            
+
             <div class="half">
                 <label for="subject">konu</label>
                 <input type="text" aria-label="subject" name="subject" id="subject">
             </div>
-            
+
             <div class="half">
                 <label for="mail">e posta</label>
                 <input type="text" aria-label="mail" name="mail" id="mail">
             </div>
-            
+
             <div class="half">
-                    <label for="phone">telefon</label>
-                    <input type="text" aria-label="phone" name="phone" id="phone">
+                <label for="phone">telefon</label>
+                <input type="text" aria-label="phone" name="phone" id="phone">
             </div>
-            
+
             <div class="full">
                 <label for="message">mesajınız</label>
                 <textarea aria-label="message" name="message" id="message" cols="30" rows="10"></textarea>
@@ -155,54 +155,58 @@
 
             <div class="bottom">
                 <div class="file">
-                    <label for="file"><img src="img/icons/file.svg" alt=""></label>
+                    <label for="file"><img src="img/icons/file.svg" alt="image explaniation"></label>
                     <input type="file" aria-label="file" name="file" id="file" class="inputfile" />
                     <h2>Dosya Seçiniz</h2>
                 </div>
-                <button type="submit" class="btn btn--primary btn--iconed">gönder</button>
+                <button type="submit" aria-label="send" name="send" class="btn btn--primary btn--iconed">gönder</button>
             </div>
         </form>
     </section>
 
     <section class="contactus-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.892037658142!2d29.163514676459116!3d40.91811302497128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac57c6de66487%3A0xefeace1e7b702997!2sPointix%20Bili%C5%9Fim%20Teknolojileri!5e0!3m2!1str!2str!4v1691661869004!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- yalnızca src kısmını çeksek yeterli... -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.892037658142!2d29.163514676459116!3d40.91811302497128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac57c6de66487%3A0xefeace1e7b702997!2sPointix%20Bili%C5%9Fim%20Teknolojileri!5e0!3m2!1str!2str!4v1691661869004!5m2!1str!2str"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <footer class="footer">
         <div class="footer__upper">
             <div class="left">
-                <a href="#">
-                    <img src="img/navbar/logo.svg" alt="">
+                <a href="index.html">
+                    <img src="img/navbar/logo.svg" alt="brand logo">
                 </a>
                 <h2>size nasıl yardımcı olabiliriz</h2>
-                <a class="btn btn--secondary btn--iconed-colored" href="#">
+                <a class="btn btn--secondary btn--iconed-colored" href="contact-us.html">
                     soru sorun
                 </a>
             </div>
             <div class="right">
                 <ul class="navs">
                     <li>
-                        <a href="#">
+                        <a href="index.html">
                             ana sayfa
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="about.html">
                             kurumsal
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="services.html">
                             hizmetlerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="projects.html">
                             projelerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="contact-us.html">
                             iletişim
                         </a>
                     </li>
@@ -223,8 +227,8 @@
         <div class="footer__below">
             <h2>Copyright © 2023 Alsos</h2>
             <div class="links">
-                <a href="#">KVKK</a>
-                <a href="#">Çerez Politikası</a>
+                <a href="kvkk.html">KVKK</a>
+                <a href="cookies.html">Çerez Politikası</a>
             </div>
         </div>
     </footer>
@@ -232,14 +236,14 @@
     <section class="fixed-likns">
         <ul>
             <li>
-                <a href="#">
-                    <img src="img/icons/wp.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/wp.svg" alt="whatsapp icon">
                     <h2>+90 000 00 00</h2>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <img src="img/icons/mail.svg" alt="">
+                <a target="_blank" href="404.html">
+                    <img src="img/icons/mail.svg" alt="mail icon">
                     <h2>loremipsum@lorem.com.tr</h2>
                 </a>
             </li>

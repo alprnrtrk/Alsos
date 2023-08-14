@@ -148,7 +148,7 @@
 
                         margin: 0 calc(var(--navbar-navsGap) / 2);
 
-                        font-weight: $fontWeight--bold;
+                        font-weight: $fontWeight--semi-bold;
 
                         color: $color--body-background;
 
@@ -213,7 +213,7 @@
 
                     color: $color--body-background;
 
-                    font-weight: $fontWeight--medium;
+                    font-weight: $fontWeight--semi-bold;
                     text-transform: uppercase;
 
                     @include devices(xl) {
@@ -295,7 +295,7 @@
                         text-transform: uppercase;
 
                         font-size: 1rem;
-                        font-weight: $fontWeight--medium;
+                        font-weight: $fontWeight--semi-bold;
 
                         color: $color--body-background;
 
