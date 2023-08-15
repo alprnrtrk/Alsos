@@ -17,6 +17,9 @@ $(document).ready(function () {
             case "filter":
                 filter(this);
                 break;
+            case "filterNormal":
+                filterNormal(this);
+                break;
             case "subFilter":
                 subFilter(this);
                 break;
@@ -34,12 +37,22 @@ function playPause(object) {
     // get clicked elemetns target attribute
     let target = $(object).attr("data-target");
     if ($(target).get(0).paused) {
-        $(object).find("img").attr("src", "img/icons/pause.svg");6
+        $(object).find("img").attr("src", "img/icons/pause.svg"); 6
         $(target).trigger('play');
     } else {
         $(object).find("img").attr("src", "img/icons/play.svg");
         $(target).trigger('pause');
     }
+}
+
+function filterNormal(object) {
+    let target = $(object).attr("data-target");
+    let group = $(object).attr("data-value");
+    $(group).removeClass("active");
+    $('[data-role = "filterNormal"]').removeClass("active");
+    $(object).addClass("active");
+
+    $(target).addClass("active");
 }
 
 function filter(object) {
@@ -49,16 +62,16 @@ function filter(object) {
     $('[data-role = "filter"]').removeClass("active");
     $(object).addClass("active");
 
-    if($('[data-target="done"]').hasClass("active")){
-        $('[data-id="'+ target +'"][data-status="done"]').addClass("active");
+    if ($('[data-target="done"]').hasClass("active")) {
+        $('[data-id="' + target + '"][data-status="done"]').addClass("active");
         console.log("done");
-    }else if($('[data-target="ongoin"]').hasClass("active")){
-        $('[data-id="'+ target +'"][data-status="ongoin"]').addClass("active");
+    } else if ($('[data-target="ongoin"]').hasClass("active")) {
+        $('[data-id="' + target + '"][data-status="ongoin"]').addClass("active");
         console.log("ongoin");
     }
 }
 
-function subFilter(object){
+function subFilter(object) {
     $('[data-role = "subFilter"]').removeClass("active");
     $(object).addClass("active");
 

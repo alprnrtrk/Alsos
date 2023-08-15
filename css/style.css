@@ -383,7 +383,9 @@ a {
 .page-top__beared-links li a {
   font-size: 1rem;
   font-weight: 500;
-  text-transform: capitalize;
+}
+.page-top__beared-links li a::first-letter {
+  text-transform: uppercase;
 }
 .page-top__beared-links li a::before {
   content: "/";
@@ -396,8 +398,10 @@ a {
 }
 .page-top__title {
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 5px;
+}
+.page-top__title::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .page-top__title {
@@ -476,7 +480,9 @@ a {
   font-weight: 500;
   border-radius: 100px;
   transition: 0.3s;
-  text-transform: capitalize;
+}
+.btn::first-letter {
+  text-transform: uppercase;
 }
 .btn:hover {
   transform: scale(1.05);
@@ -717,7 +723,6 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: var(--navbar-navsGap);
-  text-transform: capitalize;
   list-style: none;
 }
 .navbar__right .navs .each nav a {
@@ -725,6 +730,9 @@ a {
   margin: 0 calc(var(--navbar-navsGap) / 2);
   font-weight: 600;
   color: #f0eded;
+}
+.navbar__right .navs .each nav a::first-letter {
+  text-transform: uppercase;
 }
 .navbar__right .navs .each nav a:hover::before {
   width: 20px;
@@ -1563,7 +1571,9 @@ a {
 }
 .projects__left .btn {
   margin-top: auto;
-  text-transform: capitalize;
+}
+.projects__left .btn::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .projects__left {
@@ -2286,8 +2296,10 @@ a {
   width: 100%;
   font-size: 2rem;
   font-weight: 400;
-  text-transform: capitalize;
   color: #f0eded;
+}
+.footer__upper > .left h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .footer__upper > .left h2 {
@@ -2295,8 +2307,8 @@ a {
     text-align: center;
   }
 }
-.footer__upper > .left a {
-  text-transform: capitalize;
+.footer__upper > .left a::first-letter {
+  text-transform: uppercase;
 }
 .footer__upper > .right {
   display: flex;
@@ -2335,9 +2347,11 @@ a {
   padding-bottom: 10px;
   font-size: 1rem;
   font-weight: 600;
-  text-transform: capitalize;
   color: #f0eded;
   transition: 0.3s;
+}
+.footer__upper > .right .navs li a::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .footer__upper > .right .navs li a {
@@ -2388,8 +2402,11 @@ a {
   margin-bottom: 40px;
   font-size: 0.8rem;
   font-weight: 700;
-  text-transform: capitalize;
   color: #f0eded;
+}
+.footer__upper > .right .details .left h2::first-letter,
+.footer__upper > .right .details .right h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .footer__upper > .right .details .left h2,
@@ -3305,7 +3322,9 @@ a {
   margin: 30px 0;
   font-size: 2.5rem;
   font-weight: 700;
-  text-transform: capitalize;
+}
+.services-blocks__each .content h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .services-blocks__each .content h2 {
@@ -3717,8 +3736,10 @@ a {
   margin: 70px 0;
   font-size: 2rem;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
+}
+.blog-other__title h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .blog-other__title h2 {
@@ -3756,8 +3777,10 @@ a {
   margin: 40px 0;
   font-size: 1rem;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
+}
+.blog-other__slider .swiper-wrapper .swiper-slide a h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .blog-other__slider .swiper-wrapper .swiper-slide a h2 {
@@ -3992,7 +4015,10 @@ a {
 .contactus-form form .full label {
   margin-bottom: 10px;
   font-weight: 400;
-  text-transform: capitalize;
+}
+.contactus-form form .half label::first-letter,
+.contactus-form form .full label::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .contactus-form form .half label,
@@ -4227,11 +4253,13 @@ a {
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 400;
-  text-transform: capitalize;
   border: 0;
   background-color: transparent;
   cursor: pointer;
   transition: 0.3s;
+}
+.projects-list__filters ul li button::first-letter {
+  text-transform: uppercase;
 }
 .projects-list__filters ul li button:hover {
   margin-left: 5px;
@@ -4274,7 +4302,9 @@ a {
   width: -moz-min-content;
   width: min-content;
   font-size: 2rem;
-  text-transform: capitalize;
+}
+.projects-list__filters h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .projects-list__filters h2 {
@@ -4313,11 +4343,13 @@ a {
 .projects-list__items .sub-filter button {
   margin: 0 20px;
   font-weight: 500;
-  text-transform: capitalize;
   background-color: transparent;
   border: 0;
   cursor: pointer;
   transition: 0.3s;
+}
+.projects-list__items .sub-filter button::first-letter {
+  text-transform: uppercase;
 }
 .projects-list__items .sub-filter button:hover {
   transform: translateY(-2px);
@@ -4771,8 +4803,10 @@ a {
   margin: 70px 0;
   font-size: 2rem;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
+}
+.project-other__title h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .project-other__title h2 {
@@ -4810,8 +4844,10 @@ a {
   margin: 40px 0;
   font-size: 1rem;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
+}
+.project-other__slider .swiper-wrapper .swiper-slide a h2::first-letter {
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1200px) {
   .project-other__slider .swiper-wrapper .swiper-slide a h2 {
@@ -4889,5 +4925,7 @@ a {
   margin: 50px 0;
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.2);
-  text-transform: capitalize;
+}
+.missing h2::first-letter {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

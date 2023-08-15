@@ -22,6 +22,8 @@
 
         color: transparentize($color--body-foreground, .8);
 
-        text-transform: capitalize;
+        &::first-letter{
+            text-transform: uppercase;
+        }
     }
 }

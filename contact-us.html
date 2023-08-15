@@ -54,7 +54,7 @@
                 </li>
                 <li class="each">
                     <nav>
-                        <a href="contact-us.html"  class="active">
+                        <a href="contact-us.html" class="active">
                             iletişim
                         </a>
                     </nav>
@@ -130,27 +130,27 @@
         <form action="">
             <div class="half">
                 <label for="fullname">ad soyad</label>
-                <input type="text" aria-label="fullname" name="fullname" id="fullname">
+                <input onkeydown="return /[space a-z]/i.test(event.key)" type="text" maxlength="24" aria-label="fullname" name="fullname" id="fullname">
             </div>
 
             <div class="half">
                 <label for="subject">konu</label>
-                <input type="text" aria-label="subject" name="subject" id="subject">
+                <input type="text" maxlength="48" aria-label="subject" name="subject" id="subject">
             </div>
 
             <div class="half">
                 <label for="mail">e posta</label>
-                <input type="text" aria-label="mail" name="mail" id="mail">
+                <input type="text" maxlength="50" aria-label="mail" name="mail" id="mail">
             </div>
 
             <div class="half">
                 <label for="phone">telefon</label>
-                <input type="text" aria-label="phone" name="phone" id="phone">
+                <input type="tel" aria-label="phone" name="phone" id="phone" placeholder="+90 (___) ___ __ __">
             </div>
 
             <div class="full">
                 <label for="message">mesajınız</label>
-                <textarea aria-label="message" name="message" id="message" cols="30" rows="10"></textarea>
+                <textarea maxlength="500" aria-label="message" name="message" id="message" cols="30" rows="10"></textarea>
             </div>
 
             <div class="bottom">
@@ -255,7 +255,18 @@
     <script src="js/keyboard.js"></script>
     <script src="js/littlesecret.js"></script>
     <script src="js/counter.min.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $("#phone").mask("+90 (sss) sss ss ss", { placeholder: "+90 (___) ___ __ __" });
+        });
+
+        $("#phone").on("click", function(){
+            $(this).val("");
+        })
+    </script>
 </body>
 
 </html>

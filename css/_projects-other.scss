@@ -12,8 +12,11 @@
             font-size: 2rem;
             font-weight: $fontWeight--bold;
 
-            text-transform: capitalize;
             text-align: center;
+
+            &::first-letter{
+                text-transform: uppercase;
+            }
 
             @include devices(xl) {
                 margin: 30px;
@@ -54,8 +57,11 @@
                         font-size: 1rem;
                         font-weight: $fontWeight--bold;
 
-                        text-transform: capitalize;
                         text-align: center;
+
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
 
 
                         @include devices(xl) {

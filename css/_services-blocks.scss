@@ -173,7 +173,9 @@
                 font-size: 2.5rem;
                 font-weight: $fontWeight--bold;
                 
-                text-transform: capitalize;
+                &::first-letter{
+                    text-transform: uppercase;
+                }
 
                 @include devices(xl){
                     font-size: 5rem;

@@ -107,7 +107,9 @@
         .btn {
             margin-top: auto;
 
-            text-transform: capitalize;
+            &::first-letter{
+                text-transform: uppercase;
+            }
         }
 
         @include devices(xl) {

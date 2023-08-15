@@ -137,8 +137,6 @@
 
             margin-bottom: var(--navbar-navsGap);
 
-            text-transform: capitalize;
-
             list-style: none;
 
             .each {
@@ -151,6 +149,10 @@
                         font-weight: $fontWeight--semi-bold;
 
                         color: $color--body-background;
+
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
 
                         &:hover {
                             &::before {
@@ -288,7 +290,7 @@
 
                 li {
                     margin: 5px 0;
-
+                     
                     a {
                         position: relative;
 

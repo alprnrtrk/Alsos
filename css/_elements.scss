@@ -21,7 +21,9 @@
                 font-size: 1rem;
                 font-weight: $fontWeight--medium;
                 
-                text-transform: capitalize;
+                &::first-letter{
+                    text-transform: uppercase;
+                }
 
                 &::before{
                     content: "/";
@@ -39,8 +41,11 @@
     &__title{
         font-weight: $fontWeight--medium;
 
-        text-transform: uppercase;
         letter-spacing: 5px;
+
+        &::first-letter{
+            text-transform: uppercase;
+        }
 
         @include devices(xl){
             font-size: 3rem;
@@ -97,7 +102,9 @@
 
     transition: .3s;
 
-    text-transform: capitalize;
+    &::first-letter{
+        text-transform: uppercase;
+    }
 
     &:hover {
         transform: scale(1.05);

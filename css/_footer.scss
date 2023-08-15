@@ -68,9 +68,11 @@
                 font-size: 2rem;
                 font-weight: $fontWeight--normal;
 
-                text-transform: capitalize;
-
                 color: $color--body-background;
+
+                &::first-letter{
+                    text-transform: uppercase;
+                }
 
                 @include devices(xl) {
                     margin: 30px 0;
@@ -80,7 +82,9 @@
             }
 
             a {
-                text-transform: capitalize;
+                &::first-letter{
+                    text-transform: uppercase;
+                }
             }
         }
 
@@ -110,11 +114,13 @@
                         font-size: 1rem;
                         font-weight: $fontWeight--semi-bold;
 
-                        text-transform: capitalize;
-
                         color: $color--body-background;
 
                         transition: .3s;
+
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
 
                         @include devices(xl) {
                             margin: 5px 0;
@@ -169,9 +175,11 @@
                         font-size: .8rem;
                         font-weight: $fontWeight--bold;
 
-                        text-transform: capitalize;
-
                         color: $color--body-background;
+
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
 
                         @include devices(xl) {
                             margin-top: 30px;
